@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedBrief</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      padding: 48px 40px;
+      max-width: 520px;
+      width: 100%;
+    }
+    h1 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
+    .subtitle { color: #6b7280; font-size: 0.95rem; margin-bottom: 32px; }
+    label { display: block; font-weight: 600; font-size: 0.9rem; color: #374151; margin-bottom: 8px; }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    input[type="text"]:focus { border-color: #4f46e5; }
+    button {
+      margin-top: 16px;
+      width: 100%;
+      padding: 13px;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button:hover { background: #4338ca; }
+    button:disabled { background: #9ca3af; cursor: not-allowed; }
+    #status-box {
+      margin-top: 24px;
+      padding: 14px 16px;
+      background: #f0f4ff;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      color: #3730a3;
+      display: none;
+      min-height: 44px;
+    }
+    #progress { width: 100%; height: 4px; background: #e0e7ff; border-radius: 2px; margin-top: 8px; overflow: hidden; display: none; }
+    #progress-bar { height: 100%; background: #4f46e5; width: 0%; transition: width .4s; }
+    .error-msg { color: #dc2626; font-size: 0.88rem; margin-top: 10px; display: none; }
+    .warning-msg { color: #92400e; background: #fffbeb; border: 1px solid #fde68a; border-radius: 6px; padding: 8px 12px; font-size: 0.85rem; margin-top: 8px; display: none; }
+    .or-divider {
+      display: flex; align-items: center; gap: 10px;
+      margin: 14px 0 4px; color: #9ca3af; font-size: 0.82rem;
+    }
+    .or-divider::before, .or-divider::after {
+      content: ''; flex: 1; height: 1px; background: #e5e7eb;
+    }
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #374151;
+      background: #fff;
+      outline: none;
+      cursor: pointer;
+      transition: border-color .2s;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
+    select:focus { border-color: #4f46e5; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>MedBrief</h1>
+    <p class="subtitle">Medical intelligence briefings — powered by live data and AI synthesis</p>
+
+    <form id="search-form">
+      <label for="condition">Medical condition</label>
+      <input type="text" id="condition" name="condition"
+             placeholder="e.g. Type 2 Diabetes, Multiple Sclerosis"
+             autocomplete="off" required>
+
+      <div class="or-divider">or choose from common conditions</div>
+
+      <select id="condition-select" aria-label="Select a common condition">
+        <option value="">-- select a condition --</option>
+        <optgroup label="Metabolic">
+          <option>Type 2 Diabetes</option>
+          <option>Type 1 Diabetes</option>
+          <option>Obesity</option>
+          <option>Non-Alcoholic Fatty Liver Disease</option>
+        </optgroup>
+        <optgroup label="Cardiovascular">
+          <option>Heart Failure</option>
+          <option>Atrial Fibrillation</option>
+          <option>Hypertension</option>
+          <option>Coronary Artery Disease</option>
+        </optgroup>
+        <optgroup label="Oncology">
+          <option>Non-Small Cell Lung Cancer</option>
+          <option>Breast Cancer</option>
+          <option>Colorectal Cancer</option>
+          <option>Glioblastoma</option>
+        </optgroup>
+        <optgroup label="Neurology">
+          <option>Multiple Sclerosis</option>
+          <option>Parkinson's Disease</option>
+          <option>Alzheimer's Disease</option>
+          <option>Amyotrophic Lateral Sclerosis</option>
+        </optgroup>
+        <optgroup label="Immunology / Rheumatology">
+          <option>Rheumatoid Arthritis</option>
+          <option>Systemic Lupus Erythematosus</option>
+          <option>Crohn's Disease</option>
+          <option>Ulcerative Colitis</option>
+        </optgroup>
+        <optgroup label="Respiratory">
+          <option>Asthma</option>
+          <option>COPD</option>
+          <option>Idiopathic Pulmonary Fibrosis</option>
+        </optgroup>
+        <optgroup label="Infectious Disease">
+          <option>HIV/AIDS</option>
+          <option>Tuberculosis</option>
+          <option>Hepatitis C</option>
+        </optgroup>
+        <optgroup label="Rare / Genetic">
+          <option>Cystic Fibrosis</option>
+          <option>Sickle Cell Disease</option>
+          <option>Duchenne Muscular Dystrophy</option>
+        </optgroup>
+      </select>
+
+      <button type="submit" id="submit-btn">Generate Briefing</button>
+    </form>
+
+    <div id="status-box"></div>
+    <div id="progress"><div id="progress-bar"></div></div>
+    <div class="warning-msg" id="warning-msg"></div>
+    <div class="error-msg" id="error-msg"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('search-form');
+    const btn = document.getElementById('submit-btn');
+    const conditionSelect = document.getElementById('condition-select');
+
+    conditionSelect.addEventListener('change', () => {
+      const val = conditionSelect.value;
+      if (val) {
+        document.getElementById('condition').value = val;
+        conditionSelect.value = '';
+      }
+    });
+    const statusBox = document.getElementById('status-box');
+    const progressDiv = document.getElementById('progress');
+    const progressBar = document.getElementById('progress-bar');
+    const errorMsg = document.getElementById('error-msg');
+    const warningMsg = document.getElementById('warning-msg');
+
+    let progressPct = 0;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const condition = document.getElementById('condition').value.trim();
+      if (!condition) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Generating...';
+      statusBox.style.display = 'block';
+      progressDiv.style.display = 'block';
+      statusBox.textContent = 'Starting research...';
+      errorMsg.style.display = 'none';
+      warningMsg.style.display = 'none';
+      progressPct = 5;
+      progressBar.style.width = progressPct + '%';
+
+      let sessionId;
+      try {
+        const res = await fetch('/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ condition }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Server error');
+        sessionId = data.session_id;
+      } catch (err) {
+        showError('Failed to start: ' + err.message);
+        return;
+      }
+
+      // Open SSE stream
+      const evtSource = new EventSource('/stream/' + sessionId);
+      let pollInterval = null;
+
+      function redirectToReport() {
+        progressBar.style.width = '100%';
+        statusBox.textContent = 'Report ready — loading...';
+        window.location.href = '/report/' + sessionId;
+      }
+
+      function startPolling() {
+        if (pollInterval) return;
+        statusBox.textContent = 'Synthesizing report (this may take a minute)...';
+        pollInterval = setInterval(async () => {
+          try {
+            const r = await fetch('/status/' + sessionId);
+            const d = await r.json();
+            if (d.ready) {
+              clearInterval(pollInterval);
+              redirectToReport();
+            }
+          } catch (_) { /* network blip — keep polling */ }
+        }, 3000);
+      }
+
+      evtSource.onmessage = (e) => {
+        const event = JSON.parse(e.data);
+
+        if (event.type === 'status') {
+          statusBox.textContent = event.data;
+          progressPct = Math.min(progressPct + 10, 85);
+          progressBar.style.width = progressPct + '%';
+        } else if (event.type === 'loop_info') {
+          const d = event.data;
+          statusBox.textContent =
+            `Iteration ${d.iteration}/3 — Trials: ${d.trials}, PubMed: ${d.pubmed}, FDA: ${d.fda}`;
+        } else if (event.type === 'complete') {
+          if (pollInterval) clearInterval(pollInterval);
+          evtSource.close();
+          redirectToReport();
+        } else if (event.type === 'warning') {
+          // Non-fatal — show inline, keep pipeline running
+          showWarning(event.data.message || event.data);
+        } else if (event.type === 'error') {
+          // Per-source errors are non-fatal — log as warning and continue
+          showWarning('Source unavailable (' + (event.data.source || 'unknown') + ') — continuing with available data.');
+        }
+      };
+
+      evtSource.onerror = () => {
+        evtSource.close();
+        // SSE dropped (long synthesis gap) — fall back to polling
+        startPolling();
+      };
+    });
+
+    function showWarning(msg) {
+      warningMsg.textContent = msg;
+      warningMsg.style.display = 'block';
+    }
+
+    function showError(msg) {
+      btn.disabled = false;
+      btn.textContent = 'Generate Briefing';
+      errorMsg.textContent = msg;
+      errorMsg.style.display = 'block';
+      statusBox.style.display = 'none';
+      progressDiv.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

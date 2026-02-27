@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /e/InsightGlobalAssesment/src -type f -exec wc -c {} +)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(data[0][''text'']\\)\")",
+      "Bash(python \"C:\\\\Users\\\\prana\\\\.claude\\\\projects\\\\e--InsightGlobalAssesment\\\\dc720396-28b8-49e1-b500-3b21b17318ce\\\\tool-results\\\\toolu_0114fxhuDECk4VNXBFRNbntw.txt\")",
+      "Bash(node -e \"const fs=require\\(''fs''\\);const d=JSON.parse\\(fs.readFileSync\\(''C:\\\\\\\\Users\\\\\\\\prana\\\\\\\\.claude\\\\\\\\projects\\\\\\\\e--InsightGlobalAssesment\\\\\\\\dc720396-28b8-49e1-b500-3b21b17318ce\\\\\\\\tool-results\\\\\\\\toolu_0114fxhuDECk4VNXBFRNbntw.txt'',''utf8''\\)\\);console.log\\(d[0].text\\);\")",
+      "Skill(claude-developer-platform)",
+      "Skill(claude-developer-platform:*)",
+      "Bash(\"e:/InsightGlobalAssesment/tasks/todo.md\":*)",
+      "Bash(python -c \":*)",
+      "Bash(timeout 5 python -c \":*)",
+      "WebFetch(domain:clinicaltrials.gov)",
+      "Bash(python -:*)",
+      "Bash(curl -s -o /dev/null -w \"ClinicalTrials: %{http_code} \\(%{time_total}s\\)\\\\n\" \"https://clinicaltrials.gov/api/v2/studies?query.cond=type+2+diabetes&filter.overallStatus=RECRUITING&pageSize=2&format=json\")",
+      "Bash(curl -s -o /dev/null -w \"PubMed ESearch: %{http_code} \\(%{time_total}s\\)\\\\n\" \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=type+2+diabetes[MeSH+Terms]&retmax=5&retmode=json\")",
+      "Bash(curl -s -o /dev/null -w \"PubMed ESearch: %{http_code} \\(%{time_total}s\\)\\\\n\" \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=type+2+diabetes%5BMeSH+Terms%5D&retmax=5&retmode=json\")",
+      "Bash(curl -s -o /dev/null -w \"OpenFDA labels: %{http_code} \\(%{time_total}s\\)\\\\n\" \"https://api.fda.gov/drug/label.json?search=indications_and_usage:%22type+2+diabetes%22&limit=2\")",
+      "Bash(curl -s -o /dev/null -w \"Europe PMC: %{http_code} \\(%{time_total}s\\)\\\\n\" \"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=type+2+diabetes&format=json&resultType=lite&pageSize=2\")",
+      "Bash(curl -s -o /dev/null -w \"SEC EDGAR: %{http_code} \\(%{time_total}s\\)\\\\n\" \"https://efts.sec.gov/LATEST/search-index?q=%22type+2+diabetes%22&forms=10-K&dateRange=custom&startdt=2024-01-01&enddt=2026-01-01\")",
+      "Bash(curl -s -o /dev/null -w \"SEC EDGAR \\(with User-Agent\\): %{http_code} \\(%{time_total}s\\)\\\\n\" -H \"User-Agent: MedBrief/1.0 contact@yourorg.com\" \"https://efts.sec.gov/LATEST/search-index?q=%22type+2+diabetes%22&forms=10-K&dateRange=custom&startdt=2024-01-01&enddt=2026-01-01\")",
+      "Bash(curl -s \"https://clinicaltrials.gov/api/v2/studies?query.cond=type+2+diabetes&filter.overallStatus=RECRUITING&pageSize=2&format=json\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f''totalCount={d[\"\"totalCount\"\"]}, studies={len\\(d[\"\"studies\"\"]\\)}, first={d[\"\"studies\"\"][0][\"\"protocolSection\"\"][\"\"identificationModule\"\"][\"\"nctId\"\"]}''\\)\")",
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f''totalCount={d[\"\"totalCount\"\"]}, returned={len\\(d[\"\"studies\"\"]\\)}, first_nct={d[\"\"studies\"\"][0][\"\"protocolSection\"\"][\"\"identificationModule\"\"][\"\"nctId\"\"]}''\\)\")",
+      "Bash(curl -s \"https://clinicaltrials.gov/api/v2/studies?query.cond=type+2+diabetes&filter.overallStatus=RECRUITING&pageSize=2&format=json&countTotal=true\")",
+      "Bash(curl -s \"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=type+2+diabetes%5BMeSH+Terms%5D&retmax=5&retmode=json\")",
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); r=d[''esearchresult'']; print\\(f''count={r[\"\"count\"\"]}, ids={r[\"\"idlist\"\"]}''\\)\")",
+      "Bash(curl -s \"https://api.fda.gov/drug/label.json?search=indications_and_usage:%22type+2+diabetes%22&limit=2\")",
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f''total={d[\"\"meta\"\"][\"\"results\"\"][\"\"total\"\"]}, brand={d[\"\"results\"\"][0].get\\(\"\"openfda\"\",{}\\).get\\(\"\"brand_name\"\",[\"\"N/A\"\"]\\)[0]}''\\)\")",
+      "Bash(curl -s \"https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=type+2+diabetes&format=json&resultType=lite&pageSize=2\")",
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f''hitCount={d[\"\"hitCount\"\"]}, first_title={d[\"\"resultList\"\"][\"\"result\"\"][0][\"\"title\"\"][:70]}''\\)\")",
+      "Bash(curl -s -H \"User-Agent: MedBrief/1.0 contact@yourorg.com\" \"https://efts.sec.gov/LATEST/search-index?q=%22type+2+diabetes%22&forms=10-K&dateRange=custom&startdt=2024-01-01&enddt=2026-01-01\")",
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); hits=d[''hits''][''hits'']; print\\(f''total={d[\"\"hits\"\"][\"\"total\"\"][\"\"value\"\"]}, first_entity={hits[0][\"\"_source\"\"][\"\"entity_name\"\"]}''\\)\")",
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); hits=d[''hits''][''hits'']; src=hits[0][''_source'']; print\\(f''total={d[\"\"hits\"\"][\"\"total\"\"][\"\"value\"\"]}, keys={list\\(src.keys\\(\\)\\)}, first={src}''\\)\")"
+    ]
+  }
+}

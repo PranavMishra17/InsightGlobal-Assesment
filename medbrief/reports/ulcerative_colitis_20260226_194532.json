@@ -1,0 +1,828 @@
+{
+  "report_id": "063e2ac6-497c-4a11-8fcb-8726e5c9d3e8",
+  "condition": "Ulcerative Colitis",
+  "generated_at": "2026-02-27T00:45:32.439883Z",
+  "data_sources_queried": [
+    "clinicaltrials",
+    "pubmed",
+    "openfda",
+    "web_search"
+  ],
+  "sections": {
+    "overview": {
+      "title": "Condition Overview",
+      "content": "Ulcerative colitis (UC) is a chronic, idiopathic inflammatory bowel disease that affects the colon and rectum with continuous mucosal inflammation extending proximally from the rectum to a variable extent [SOURCE_16] [SOURCE_22]. As of 2023, the global prevalence was estimated at approximately 5 million cases, with incidence increasing worldwide, including in newly industrialized nations [SOURCE_16] [SOURCE_19]. In North America, the prevalence exceeds 400 per 100,000, with approximately 1.25 million people affected in the United States alone [SOURCE_17] [SOURCE_39]. The disease follows a relapsing and remitting course characterized by abdominal pain, chronic diarrhea, rectal bleeding, and weight loss [SOURCE_18] [SOURCE_25].\n\nThe pathogenesis of UC is thought to involve a combination of genetic predisposition, environmental exposures, gut epithelial barrier defects, and dysregulated mucosal immune responses [SOURCE_16] [SOURCE_19]. Risk factors include Western diet influences, certain medications, and lifestyle factors that may alter the host microbiome or immune response [SOURCE_19]. Despite advances in understanding the disease, the precise cause and etiology remain poorly understood, and there is currently no cure [SOURCE_18]. Individuals with UC face a lower life expectancy compared to the general population and are at increased risk for colectomy and colorectal cancer [SOURCE_17].\n\nThe primary aim of therapy is to achieve and maintain long-term steroid-free remission while preventing complications such as hospitalizations, surgeries, and cancer, and ensuring adequate quality of life and psychosocial well-being [SOURCE_39]. The therapeutic landscape has expanded significantly in recent years, with multiple new biologic and small-molecule therapies gaining regulatory approval, reflecting a paradigm shift toward earlier use of advanced therapies and personalized treatment approaches [SOURCE_20] [SOURCE_39]."
+    },
+    "standard_of_care": {
+      "title": "Current Standard of Care",
+      "content": "The current standard of care for ulcerative colitis is guided by the 2024 AGA Living Clinical Practice Guideline and the 2025 ACG Clinical Guideline Update, both of which emphasize early initiation of advanced therapies over traditional step-up approaches [SOURCE_20] [SOURCE_23] [SOURCE_39]. For mild disease, mesalamine (an aminosalicylate) remains a foundational FDA-approved treatment for moderately active UC in adults [SOURCE_38]. Corticosteroids such as prednisone are used across multiple inflammatory conditions and serve as induction agents, particularly in acute flares, though the goal is to achieve steroid-free remission [SOURCE_36] [SOURCE_37] [SOURCE_39].\n\nFor moderate-to-severe UC, the AGA guideline recommends the use of infliximab, golimumab, vedolizumab, tofacitinib, upadacitinib, ustekinumab, ozanimod, etrasimod, risankizumab, and guselkumab, and suggests the use of adalimumab, filgotinib, and mirikizumab over no treatment [SOURCE_20] [SOURCE_39]. To simplify clinical decision-making, the AGA categorized these 12 advanced treatments into \"efficacy buckets\" grouping drugs with similar efficacy profiles, allowing clinicians to select therapies based on likelihood of inducing remission regardless of mechanism [SOURCE_39]. Notably, the U.S. FDA label recommends use of JAK inhibitors in patients with prior failure or intolerance to TNF antagonist therapy, although a recent label update for upadacitinib now permits its use before TNF blockers in certain patients [SOURCE_39].\n\nIntravenous corticosteroids remain the mainstay for patients hospitalized with acute severe ulcerative colitis (ASUC), though 30%–40% of these patients are refractory to corticosteroids, highlighting a significant unmet need in this subpopulation [SOURCE_30]. Overall, the 2024–2025 guidelines reflect a growing trend toward biologic-focused and personalized therapy with emphasis on early intervention, particularly with IL-23 inhibitors [SOURCE_39].",
+      "approved_therapies": [
+        {
+          "name": "Mesalamine",
+          "drug_class": "Aminosalicylate",
+          "regulatory_status": "FDA-approved for moderately active ulcerative colitis in adults",
+          "approval_year": null,
+          "citation_index": 38
+        },
+        {
+          "name": "Prednisone",
+          "drug_class": "Corticosteroid",
+          "regulatory_status": "FDA-approved (indicated for various inflammatory conditions including ulcerative colitis)",
+          "approval_year": null,
+          "citation_index": 36
+        },
+        {
+          "name": "Mirikizumab (Omvoh)",
+          "drug_class": "IL-23p19 inhibitor",
+          "regulatory_status": "FDA-approved for ulcerative colitis (October 2023)",
+          "approval_year": 2023,
+          "citation_index": 39
+        },
+        {
+          "name": "Etrasimod (Velsipity)",
+          "drug_class": "Sphingosine 1-phosphate (S1P) receptor modulator",
+          "regulatory_status": "FDA-approved for moderately to severely active ulcerative colitis in adults (October 2023)",
+          "approval_year": 2023,
+          "citation_index": 39
+        },
+        {
+          "name": "Risankizumab (Skyrizi)",
+          "drug_class": "IL-23p19 inhibitor",
+          "regulatory_status": "FDA-approved for moderately to severely active ulcerative colitis (June 2024)",
+          "approval_year": 2024,
+          "citation_index": 39
+        },
+        {
+          "name": "Upadacitinib",
+          "drug_class": "Janus kinase 1 (JAK1) inhibitor",
+          "regulatory_status": "FDA-approved for moderately to severely active ulcerative colitis (label updated to allow use before TNF blockers)",
+          "approval_year": null,
+          "citation_index": 39
+        },
+        {
+          "name": "Guselkumab",
+          "drug_class": "IL-23p19 inhibitor (dual-acting, also binds CD64)",
+          "regulatory_status": "FDA-approved (recommended in AGA 2024 guideline for moderate-to-severe UC)",
+          "approval_year": null,
+          "citation_index": 20
+        },
+        {
+          "name": "Ozanimod",
+          "drug_class": "Sphingosine-1-phosphate receptor modulator",
+          "regulatory_status": "FDA-approved (recommended in AGA 2024 guideline for moderate-to-severe UC)",
+          "approval_year": null,
+          "citation_index": 20
+        },
+        {
+          "name": "Vedolizumab (Entyvio)",
+          "drug_class": "Anti-integrin biologic",
+          "regulatory_status": "FDA-approved (subcutaneous formulation approved 2023; recommended in AGA 2024 guideline)",
+          "approval_year": null,
+          "citation_index": 39
+        },
+        {
+          "name": "Tofacitinib",
+          "drug_class": "Janus kinase (JAK) inhibitor",
+          "regulatory_status": "FDA-approved (recommended in AGA 2024 guideline for moderate-to-severe UC)",
+          "approval_year": null,
+          "citation_index": 20
+        }
+      ]
+    },
+    "emerging_treatments": {
+      "title": "Emerging Treatments in Development",
+      "content": "The ulcerative colitis pipeline is active and diverse, spanning novel mechanisms of action including anti-TL1A antibodies, integrin inhibitors, IL-4/IL-13 dual inhibitors, and unconventional therapeutic approaches. All therapies described below are investigational unless otherwise noted.\n\nAmong the most closely watched targets is TL1A (tumor necrosis factor-like cytokine 1A). Tulisokibart, an investigational anti-TL1A monoclonal antibody, demonstrated promising results in a Phase 2 trial for moderately to severely active UC, with a companion genetic-based diagnostic test designed to identify patients with an increased likelihood of response [SOURCE_31]. Separately, an earlier Phase 2a single-arm study of PF-06480605, another investigational anti-TL1A antibody, also suggested therapeutic potential in UC [SOURCE_35].\n\nABX464 (obefazimod) from Abivax is being evaluated in the ABTECT Phase 3 maintenance study for moderately to severely active UC in patients with inadequate or lost response to prior therapies [SOURCE_1]. MORF-057, an investigational oral integrin inhibitor from Morphic Therapeutic (now a wholly owned subsidiary of Eli Lilly), is in a Phase 2b study evaluating three active dose regimens [SOURCE_14]. Sanofi is pursuing multiple investigational programs: dupilumab (an IL-4/IL-13 inhibitor) is being studied in a Phase 2 trial specifically targeting UC patients with an eosinophilic phenotype (LIBERTY-UC SUCCEED) [SOURCE_8], and SAR441566 is in a Phase 2 dose-ranging study for moderate-to-severe UC [SOURCE_9]. Gilead Sciences is evaluating GS-1427 in a Phase 2 study for moderately to severely active UC [SOURCE_12]. Odyssey Therapeutics is recruiting for a Phase 2 study of OD-07656, which notably also evaluates subsequent vedolizumab therapy, exploring a sequencing strategy [SOURCE_2].\n\nInvestigational approaches from Chinese pharmaceutical companies include SHR-1139 from Guangdong Hengrui, under Phase 2 evaluation for moderate-to-severe UC [SOURCE_13]. Novel formulations and adjunctive strategies are also under investigation: controlled-ileocolonic-release nicotinamide (CICR-NAM) is being studied in a Phase 2/3 trial for mild-to-moderately active UC [SOURCE_6]; IcBD-01, a synthetic cannabidiol enema, is in Phase 2a for active ulcerative proctitis [SOURCE_5]; Aquamin, a multimineral supplement, is in Phase 2 as an adjuvant intervention for mild UC [SOURCE_4]; and pharmacologic weight loss with phentermine-topiramate is being studied as adjunct therapy for UC in obese patients [SOURCE_15].\n\nPediatric development is also progressing: Janssen is conducting long-term extension studies of ustekinumab and guselkumab in pediatric participants with moderately to severely active UC and other conditions [SOURCE_7] [SOURCE_10]. Notably, a Phase 4 trial is investigating upadacitinib combined with corticosteroids versus corticosteroid monotherapy for acute severe UC, exploring earlier positioning of JAK inhibition in the most critical clinical scenario [SOURCE_11]. Another Phase 4 study (MIRACLE trial) is comparing top-down therapy with mirikizumab versus standard azathioprine in newly diagnosed moderate-to-severe UC [SOURCE_3].",
+      "pipeline_items": [
+        {
+          "name": "ABX464 (Obefazimod) — ABTECT Maintenance",
+          "nct_id": "NCT05535946",
+          "phase": "Phase 3",
+          "sponsor": "Abivax S.A.",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 1
+        },
+        {
+          "name": "OD-07656",
+          "nct_id": "NCT06850727",
+          "phase": "Phase 2",
+          "sponsor": "Odyssey Therapeutics",
+          "status": "RECRUITING",
+          "citation_index": 2
+        },
+        {
+          "name": "Mirikizumab — MIRACLE (Top-down vs. Standard of Care)",
+          "nct_id": "NCT07235904",
+          "phase": "Phase 4",
+          "sponsor": "University Hospital Schleswig-Holstein",
+          "status": "RECRUITING",
+          "citation_index": 3
+        },
+        {
+          "name": "Aquamin (multimineral supplement)",
+          "nct_id": "NCT03869905",
+          "phase": "Phase 2",
+          "sponsor": "Muhammad N Aslam, MD",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 4
+        },
+        {
+          "name": "IcBD-01 (Synthetic CBD Enema)",
+          "nct_id": "NCT06353828",
+          "phase": "Phase 2a",
+          "sponsor": "CannaMore Biotechs",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 5
+        },
+        {
+          "name": "CICR-NAM (Controlled-Ileocolonic-Release Nicotinamide)",
+          "nct_id": "NCT06488625",
+          "phase": "Phase 2/3",
+          "sponsor": "University Hospital Schleswig-Holstein",
+          "status": "RECRUITING",
+          "citation_index": 6
+        },
+        {
+          "name": "Ustekinumab — Pediatric Long-term Extension",
+          "nct_id": "NCT05092269",
+          "phase": "Phase 3",
+          "sponsor": "Janssen Research & Development, LLC",
+          "status": "RECRUITING",
+          "citation_index": 7
+        },
+        {
+          "name": "Dupilumab — LIBERTY-UC SUCCEED (Eosinophilic Phenotype)",
+          "nct_id": "NCT05731128",
+          "phase": "Phase 2",
+          "sponsor": "Sanofi",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 8
+        },
+        {
+          "name": "SAR441566",
+          "nct_id": "NCT06867094",
+          "phase": "Phase 2",
+          "sponsor": "Sanofi",
+          "status": "RECRUITING",
+          "citation_index": 9
+        },
+        {
+          "name": "Guselkumab — Pediatric Long-term Extension",
+          "nct_id": "NCT06663332",
+          "phase": "Phase 3",
+          "sponsor": "Janssen Research & Development, LLC",
+          "status": "RECRUITING",
+          "citation_index": 10
+        },
+        {
+          "name": "Upadacitinib + Corticosteroids for Acute Severe UC",
+          "nct_id": "NCT07258771",
+          "phase": "Phase 4",
+          "sponsor": "Berinstein, Jeffrey",
+          "status": "RECRUITING",
+          "citation_index": 11
+        },
+        {
+          "name": "GS-1427",
+          "nct_id": "NCT06290934",
+          "phase": "Phase 2",
+          "sponsor": "Gilead Sciences",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 12
+        },
+        {
+          "name": "SHR-1139",
+          "nct_id": "NCT07232576",
+          "phase": "Phase 2",
+          "sponsor": "Guangdong Hengrui Pharmaceutical Co., Ltd",
+          "status": "RECRUITING",
+          "citation_index": 13
+        },
+        {
+          "name": "MORF-057",
+          "nct_id": "NCT05611671",
+          "phase": "Phase 2b",
+          "sponsor": "Morphic Therapeutic, Inc. (Eli Lilly subsidiary)",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 14
+        },
+        {
+          "name": "Phentermine-Topiramate (Weight Loss Adjunct)",
+          "nct_id": "NCT04721873",
+          "phase": "Phase 2",
+          "sponsor": "University of California, San Diego",
+          "status": "RECRUITING",
+          "citation_index": 15
+        }
+      ]
+    },
+    "key_players": {
+      "title": "Key Companies and Institutions",
+      "content": "The UC therapeutic landscape is shaped by a mix of large multinational pharmaceutical companies, mid-size biotech firms, and academic medical centers. Among the largest players, Sanofi is pursuing at least two investigational programs for UC—dupilumab targeting the eosinophilic phenotype and SAR441566 in dose-ranging studies—demonstrating interest in phenotype-specific treatment strategies [SOURCE_8] [SOURCE_9]. Janssen Research & Development (a Johnson & Johnson company) is advancing pediatric long-term extension studies for both ustekinumab and guselkumab, building on the adult approvals of these IL-23 pathway agents [SOURCE_7] [SOURCE_10]. Guselkumab's Phase 3 QUASAR program demonstrated efficacy as both induction and maintenance therapy [SOURCE_27], and the VEGA proof-of-concept trial explored guselkumab plus golimumab combination therapy [SOURCE_33].\n\nAbbVie is a significant presence through risankizumab (Skyrizi), which received FDA approval for UC in June 2024 based on pivotal Phase 3 data [SOURCE_26] [SOURCE_39], and upadacitinib, a JAK1 inhibitor supported by three Phase 3 trials [SOURCE_32]. Eli Lilly has multiple stakes in UC: its IL-23p19 inhibitor mirikizumab was the first-in-class agent FDA-approved for UC in October 2023 [SOURCE_28] [SOURCE_39], and it acquired Morphic Therapeutic, whose oral integrin inhibitor MORF-057 is in Phase 2b [SOURCE_14]. Pfizer's etrasimod (Velsipity), an S1P receptor modulator, was FDA-approved in October 2023 [SOURCE_29] [SOURCE_39], and the company also has prior work on anti-TL1A with PF-06480605 [SOURCE_35]. Gilead Sciences is investigating GS-1427 in Phase 2 [SOURCE_12].\n\nAmong smaller and emerging companies, Abivax S.A. is advancing ABX464 (obefazimod) through Phase 3 maintenance [SOURCE_1], Odyssey Therapeutics is evaluating the investigational OD-07656 with a novel sequencing approach involving vedolizumab [SOURCE_2], CannaMore Biotechs is developing a synthetic CBD enema [SOURCE_5], and Guangdong Hengrui Pharmaceutical is studying SHR-1139 [SOURCE_13]. Academic institutions play critical roles: University Hospital Schleswig-Holstein is sponsoring both the MIRACLE Phase 4 trial of mirikizumab and the CICR-NAM Phase 2/3 trial [SOURCE_3] [SOURCE_6], and the University of California, San Diego is investigating weight-loss adjunct therapy [SOURCE_15]. The American Gastroenterological Association (AGA) and the American College of Gastroenterology (ACG) serve as the primary bodies producing clinical practice guidelines that shape treatment paradigms [SOURCE_20] [SOURCE_23].",
+      "entities": [
+        {
+          "name": "Sanofi",
+          "type": "pharmaceutical",
+          "role": "Sponsor of dupilumab (Phase 2, eosinophilic UC phenotype) and SAR441566 (Phase 2) investigational programs",
+          "citation_indices": [
+            8,
+            9
+          ]
+        },
+        {
+          "name": "Janssen Research & Development, LLC (Johnson & Johnson)",
+          "type": "pharmaceutical",
+          "role": "Sponsor of guselkumab and ustekinumab programs including pediatric long-term extension studies; developer of guselkumab combination therapy (VEGA trial)",
+          "citation_indices": [
+            7,
+            10,
+            27,
+            33
+          ]
+        },
+        {
+          "name": "AbbVie",
+          "type": "pharmaceutical",
+          "role": "Developer of FDA-approved risankizumab (Skyrizi, 2024) and upadacitinib for UC",
+          "citation_indices": [
+            26,
+            32,
+            39
+          ]
+        },
+        {
+          "name": "Eli Lilly and Company",
+          "type": "pharmaceutical",
+          "role": "Developer of FDA-approved mirikizumab (Omvoh, 2023); parent company of Morphic Therapeutic (MORF-057, investigational oral integrin inhibitor)",
+          "citation_indices": [
+            14,
+            28,
+            39
+          ]
+        },
+        {
+          "name": "Pfizer",
+          "type": "pharmaceutical",
+          "role": "Developer of FDA-approved etrasimod (Velsipity, 2023); prior anti-TL1A work with PF-06480605",
+          "citation_indices": [
+            29,
+            35,
+            39
+          ]
+        },
+        {
+          "name": "Gilead Sciences",
+          "type": "pharmaceutical",
+          "role": "Sponsor of investigational GS-1427 (Phase 2) for moderate-to-severe UC",
+          "citation_indices": [
+            12
+          ]
+        },
+        {
+          "name": "Abivax S.A.",
+          "type": "biotech",
+          "role": "Sponsor of investigational ABX464 (obefazimod) Phase 3 maintenance study (ABTECT)",
+          "citation_indices": [
+            1
+          ]
+        },
+        {
+          "name": "Odyssey Therapeutics",
+          "type": "biotech",
+          "role": "Sponsor of investigational OD-07656 Phase 2 study with novel vedolizumab sequencing approach",
+          "citation_indices": [
+            2
+          ]
+        },
+        {
+          "name": "Morphic Therapeutic, Inc. (Eli Lilly subsidiary)",
+          "type": "biotech",
+          "role": "Developer of investigational MORF-057 oral integrin inhibitor (Phase 2b)",
+          "citation_indices": [
+            14
+          ]
+        },
+        {
+          "name": "Guangdong Hengrui Pharmaceutical Co., Ltd",
+          "type": "pharmaceutical",
+          "role": "Sponsor of investigational SHR-1139 (Phase 2) for moderate-to-severe UC",
+          "citation_indices": [
+            13
+          ]
+        },
+        {
+          "name": "University Hospital Schleswig-Holstein",
+          "type": "academic",
+          "role": "Sponsor of MIRACLE trial (mirikizumab Phase 4) and CICR-NAM Phase 2/3 trial",
+          "citation_indices": [
+            3,
+            6
+          ]
+        },
+        {
+          "name": "University of California, San Diego",
+          "type": "academic",
+          "role": "Sponsor of Phase 2 study of pharmacologic weight loss as adjunct therapy for UC in obese patients",
+          "citation_indices": [
+            15
+          ]
+        },
+        {
+          "name": "American Gastroenterological Association (AGA)",
+          "type": "professional_society",
+          "role": "Publisher of the 2024 AGA Living Clinical Practice Guideline for moderate-to-severe UC pharmacological management",
+          "citation_indices": [
+            20
+          ]
+        },
+        {
+          "name": "American College of Gastroenterology (ACG)",
+          "type": "professional_society",
+          "role": "Publisher of the 2025 ACG Clinical Guideline Update for ulcerative colitis in adults",
+          "citation_indices": [
+            23
+          ]
+        }
+      ]
+    },
+    "recent_developments": {
+      "title": "Recent Developments",
+      "content": "The 2023–2025 period has been transformative for the UC treatment landscape, marked by a wave of regulatory approvals, pivotal trial readouts, and guideline updates that collectively reshape the standard of care.\n\n**Regulatory Milestones:** The second half of 2023 saw four major FDA approvals for UC. Mirikizumab (Omvoh) became the first IL-23p19 inhibitor FDA-approved for UC in October 2023, supported by Phase 2 and Phase 3 data demonstrating efficacy in both induction and maintenance [SOURCE_28] [SOURCE_39]. Etrasimod (Velsipity), an oral once-daily S1P receptor modulator, also received FDA approval in October 2023 based on the ELEVATE UC Phase 3 program, which achieved all primary and key secondary endpoints [SOURCE_29] [SOURCE_39]. Additionally, a subcutaneous formulation of vedolizumab (Entyvio) and Zymfentra (infliximab-dyyb) were approved in 2023 [SOURCE_39]. In June 2024, risankizumab (Skyrizi) became the second IL-23 inhibitor FDA-approved for moderately to severely active UC, supported by two Phase 3 clinical trials [SOURCE_26] [SOURCE_39]. More recently, the FDA updated the indication for upadacitinib to allow its use before TNF blockers in certain UC patients, removing a significant access barrier [SOURCE_39].\n\n**Pivotal Clinical Data:** The QUASAR Phase 3 studies demonstrated that guselkumab, a dual-acting IL-23p19 inhibitor that also binds CD64, was effective as both induction and maintenance therapy for moderately to severely active UC [SOURCE_27]. The VEGA Phase 2 proof-of-concept trial showed that guselkumab plus golimumab combination therapy was more effective than either monotherapy, pointing to the potential of combination biologic approaches [SOURCE_33]. For acute severe UC, the TACOS randomized controlled trial investigated addition of tofacitinib to corticosteroids in hospitalized patients, addressing the 30%–40% corticosteroid failure rate in this critical population [SOURCE_30]. A Phase 2 trial of tulisokibart, an investigational anti-TL1A monoclonal antibody, showed promise for moderately to severely active UC, notably incorporating a companion genetic-based diagnostic test to enrich for likely responders—a noteworthy step toward precision medicine in UC [SOURCE_31].\n\n**Guideline Updates:** The 2024 AGA Living Clinical Practice Guideline issued 14 recommendations and introduced the concept of \"efficacy buckets\" to group therapies by similar efficacy, streamlining treatment selection across 12 advanced therapies now available [SOURCE_20] [SOURCE_39]. A key theme is the recommendation to start advanced therapies early rather than relying on traditional step-up approaches [SOURCE_39]. The AGA panel reviewed updated evidence in July 2025 and decided not to amend existing recommendations, with the next review planned for December 2025 [SOURCE_39]. The 2025 ACG Clinical Guideline Update reinforced the goal of long-term steroid-free remission and expanded psychosocial support as an explicit treatment objective [SOURCE_23] [SOURCE_39].\n\n**Emerging Signals:** Several Phase 2 studies are exploring novel mechanisms and treatment strategies. The LIBERTY-UC SUCCEED trial is testing dupilumab specifically in UC patients with an eosinophilic phenotype, representing a biomarker-driven approach to patient selection [SOURCE_8]. The Odyssey Therapeutics study of OD-07656 uniquely evaluates subsequent vedolizumab therapy after investigational induction, exploring optimal sequencing strategies [SOURCE_2]. Academic-led Phase 4 studies are testing early positioning of approved agents: the MIRACLE trial compares top-down mirikizumab therapy against azathioprine in newly diagnosed patients [SOURCE_3], while another study evaluates upadacitinib combined with corticosteroids for acute severe UC [SOURCE_11]. These developments collectively indicate that the field is moving toward earlier, more aggressive intervention with advanced therapies, phenotype-specific and biomarker-guided treatment selection, and combination and sequencing strategies to maximize efficacy."
+    }
+  },
+  "references": [
+    {
+      "index": 1,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05535946",
+      "title": "ABTECT - Maintenance",
+      "url": "https://clinicaltrials.gov/study/NCT05535946",
+      "pub_date": "2023-01-16",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 2,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06850727",
+      "title": "Safety and Efficacy of OD-07656 and of Subsequent Vedolizumab Therapy in Moderately to Severely Active Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT06850727",
+      "pub_date": "2025-06-02",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 3,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07235904",
+      "title": "Efficacy of Top-down Therapy With Mirikizumab Versus Standard of Care With Azathioprine in Patients With Newly Diagnosed Moderate-to-severe Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT07235904",
+      "pub_date": "2025-12-05",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 4,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT03869905",
+      "title": "Aquamin® as an Adjuvant Intervention for Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT03869905",
+      "pub_date": "2019-08-08",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 5,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06353828",
+      "title": "Phase 2a Study to Evaluate IcBD-01 Enema in Active Ulcerative Colitis Patients",
+      "url": "https://clinicaltrials.gov/study/NCT06353828",
+      "pub_date": "2023-03-01",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 6,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06488625",
+      "title": "Efficacy and Safety of Oral Controlled-Ileocolonic-Release Nicotinamide (CICR-NAM) in Patients with Mild to Moderately Active Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT06488625",
+      "pub_date": "2024-09-12",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 7,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05092269",
+      "title": "A Long-term Extension Study of Ustekinumab in Pediatric Participants",
+      "url": "https://clinicaltrials.gov/study/NCT05092269",
+      "pub_date": "2021-10-18",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 8,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05731128",
+      "title": "A Study to Investigate the Efficacy and Safety of Dupilumab Therapy Compared With Placebo in Participants Aged ≥18 Years With Moderately to Severely Active Ulcerative Colitis With an Eosinophilic Phenotype (LIBERTY-UC SUCCEED (Study in UC for Clinical Efficacy Evaluation of Dupilumab))",
+      "url": "https://clinicaltrials.gov/study/NCT05731128",
+      "pub_date": "2023-01-12",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 9,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06867094",
+      "title": "A Study to Investigate Efficacy and Safety of SAR441566 in Patients With Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT06867094",
+      "pub_date": "2025-03-28",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 10,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06663332",
+      "title": "A Long-term Extension (LTE) Study of Guselkumab in Pediatric Participants",
+      "url": "https://clinicaltrials.gov/study/NCT06663332",
+      "pub_date": "2024-10-29",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 11,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07258771",
+      "title": "Upadacitinib Combined With Corticosteroids vs Corticosteroid Monotherapy Induction for Inpatients and Outpatients With Acute Severe Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT07258771",
+      "pub_date": "2026-01-16",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 12,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06290934",
+      "title": "Study of GS-1427 in Participants With Moderately to Severely Active Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT06290934",
+      "pub_date": "2024-03-27",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 13,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07232576",
+      "title": "A Phase 2 Study to Evaluate the Efficacy, Safety and Pharmacokinetics of SHR-1139 in Patients With Moderate-to-severe Active Ulcerative Colitis",
+      "url": "https://clinicaltrials.gov/study/NCT07232576",
+      "pub_date": "2025-12-01",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 14,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05611671",
+      "title": "A Study to Evaluate MORF-057 in Adults With Moderately to Severely Active UC",
+      "url": "https://clinicaltrials.gov/study/NCT05611671",
+      "pub_date": "2022-11-21",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 15,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT04721873",
+      "title": "Pharmacologic Weight Loss as Adjunct Therapy for Ulcerative Colitis in Obese Patients",
+      "url": "https://clinicaltrials.gov/study/NCT04721873",
+      "pub_date": "2020-12-18",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:03Z"
+    },
+    {
+      "index": 16,
+      "source_type": "pubmed",
+      "identifier": "PMID:37573077",
+      "title": "Ulcerative colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37573077/",
+      "pub_date": "2023",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 17,
+      "source_type": "pubmed",
+      "identifier": "PMID:37698559",
+      "title": "Ulcerative Colitis in Adults: A Review.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37698559/",
+      "pub_date": "2023",
+      "journal": "JAMA",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 18,
+      "source_type": "pubmed",
+      "identifier": "PMID:39261229",
+      "title": "Ulcerative colitis: clinical biomarkers, therapeutic targets, and emerging treatments.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39261229/",
+      "pub_date": "2024",
+      "journal": "Trends in pharmacological sciences",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 19,
+      "source_type": "pubmed",
+      "identifier": "PMID:33121686",
+      "title": "Epidemiology and Pathogenesis of Ulcerative Colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33121686/",
+      "pub_date": "2020",
+      "journal": "Gastroenterology clinics of North America",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 20,
+      "source_type": "pubmed",
+      "identifier": "PMID:39572132",
+      "title": "AGA Living Clinical Practice Guideline on Pharmacological Management of Moderate-to-Severe Ulcerative Colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39572132/",
+      "pub_date": "2024",
+      "journal": "Gastroenterology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 21,
+      "source_type": "pubmed",
+      "identifier": "PMID:30840605",
+      "title": "ACG Clinical Guideline: Ulcerative Colitis in Adults.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30840605/",
+      "pub_date": "2019",
+      "journal": "The American journal of gastroenterology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 22,
+      "source_type": "pubmed",
+      "identifier": "PMID:32913180",
+      "title": "Ulcerative colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32913180/",
+      "pub_date": "2020",
+      "journal": "Nature reviews. Disease primers",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 23,
+      "source_type": "pubmed",
+      "identifier": "PMID:40701556",
+      "title": "ACG Clinical Guideline Update: Ulcerative Colitis in Adults.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40701556/",
+      "pub_date": "2025",
+      "journal": "The American journal of gastroenterology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 24,
+      "source_type": "pubmed",
+      "identifier": "PMID:33148393",
+      "title": "Ulcerative Colitis-Diagnostic and Therapeutic Algorithms.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33148393/",
+      "pub_date": "2020",
+      "journal": "Deutsches Arzteblatt international",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 25,
+      "source_type": "pubmed",
+      "identifier": "PMID:30837080",
+      "title": "A comprehensive review and update on ulcerative colitis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30837080/",
+      "pub_date": "2019",
+      "journal": "Disease-a-month : DM",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:04Z"
+    },
+    {
+      "index": 26,
+      "source_type": "pubmed",
+      "identifier": "PMID:39037800",
+      "title": "Risankizumab for Ulcerative Colitis: Two Randomized Clinical Trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39037800/",
+      "pub_date": "2024",
+      "journal": "JAMA",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 27,
+      "source_type": "pubmed",
+      "identifier": "PMID:39706209",
+      "title": "Guselkumab in patients with moderately to severely active ulcerative colitis (QUASAR): phase 3 double-blind, randomised, placebo-controlled induction and maintenance studies.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39706209/",
+      "pub_date": "2025",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 28,
+      "source_type": "pubmed",
+      "identifier": "PMID:37379135",
+      "title": "Mirikizumab as Induction and Maintenance Therapy for Ulcerative Colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37379135/",
+      "pub_date": "2023",
+      "journal": "The New England journal of medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 29,
+      "source_type": "pubmed",
+      "identifier": "PMID:36871574",
+      "title": "Etrasimod as induction and maintenance therapy for ulcerative colitis (ELEVATE): two randomised, double-blind, placebo-controlled, phase 3 studies.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36871574/",
+      "pub_date": "2023",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 30,
+      "source_type": "pubmed",
+      "identifier": "PMID:38131615",
+      "title": "Tofacitinib in Acute Severe Ulcerative Colitis (TACOS): A Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38131615/",
+      "pub_date": "2024",
+      "journal": "The American journal of gastroenterology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 31,
+      "source_type": "pubmed",
+      "identifier": "PMID:39321363",
+      "title": "Phase 2 Trial of Anti-TL1A Monoclonal Antibody Tulisokibart for Ulcerative Colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39321363/",
+      "pub_date": "2024",
+      "journal": "The New England journal of medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 32,
+      "source_type": "pubmed",
+      "identifier": "PMID:35644166",
+      "title": "Upadacitinib as induction and maintenance therapy for moderately to severely active ulcerative colitis: results from three phase 3, multicentre, double-blind, randomised trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35644166/",
+      "pub_date": "2022",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 33,
+      "source_type": "pubmed",
+      "identifier": "PMID:36738762",
+      "title": "Guselkumab plus golimumab combination therapy versus guselkumab or golimumab monotherapy in patients with ulcerative colitis (VEGA): a randomised, double-blind, controlled, phase 2, proof-of-concept trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36738762/",
+      "pub_date": "2023",
+      "journal": "The lancet. Gastroenterology & hepatology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 34,
+      "source_type": "pubmed",
+      "identifier": "PMID:34587385",
+      "title": "Ozanimod as Induction and Maintenance Therapy for Ulcerative Colitis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34587385/",
+      "pub_date": "2021",
+      "journal": "The New England journal of medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 35,
+      "source_type": "pubmed",
+      "identifier": "PMID:34126262",
+      "title": "Anti-TL1A Antibody PF-06480605 Safety and Efficacy for Ulcerative Colitis: A Phase 2a Single-Arm Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34126262/",
+      "pub_date": "2021",
+      "journal": "Clinical gastroenterology and hepatology : the official clinical practice journal of the American Gastroenterological Association",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:06Z"
+    },
+    {
+      "index": 36,
+      "source_type": "openfda",
+      "identifier": "LABEL:PredniSONE",
+      "title": "PredniSONE (PREDNISONE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:42:02Z"
+    },
+    {
+      "index": 37,
+      "source_type": "openfda",
+      "identifier": "LABEL:Prednisone",
+      "title": "Prednisone (PREDNISONE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:42:02Z"
+    },
+    {
+      "index": 38,
+      "source_type": "openfda",
+      "identifier": "LABEL:Mesalamine",
+      "title": "Mesalamine (MESALAMINE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:42:02Z"
+    },
+    {
+      "index": 39,
+      "source_type": "web_search",
+      "identifier": "WEB:web_search",
+      "title": "Web Search Results",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:42:54Z"
+    }
+  ],
+  "report_caveats": [
+    "Approval status reflects FDA (US) only — EMA/international status not covered.",
+    "OpenFDA data is informational; verify critical approval details at DailyMed.",
+    "Dosing information is excluded from this report.",
+    "This report is for strategic intelligence purposes only — not clinical guidance."
+  ]
+}

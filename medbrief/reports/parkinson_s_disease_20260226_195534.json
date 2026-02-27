@@ -1,0 +1,965 @@
+{
+  "report_id": "6a3c416f-c384-4a5a-b10e-aec6c92c5161",
+  "condition": "Parkinson's Disease",
+  "generated_at": "2026-02-27T00:55:34.698015Z",
+  "data_sources_queried": [
+    "clinicaltrials",
+    "pubmed",
+    "openfda",
+    "web_search"
+  ],
+  "sections": {
+    "overview": {
+      "title": "Condition Overview",
+      "content": "Parkinson's disease (PD) is a progressive neurodegenerative disorder and the second most common neurodegenerative condition after Alzheimer's disease [SOURCE_22]. It is characterized by motor symptoms including tremor, bradykinesia, and rigidity, as well as a broad spectrum of non-motor manifestations such as rapid eye movement sleep disorder, anosmia, constipation, depression, cognitive impairment, and pain [SOURCE_23] [SOURCE_48]. Male sex and advancing age are independent risk factors [SOURCE_16]. In most populations, 3–5% of cases are explained by genetic causes, with the remainder attributed to complex interactions between environmental and genetic factors [SOURCE_17]. The pathogenesis centers on the deposition of aggregated α-synuclein and the loss of dopaminergic neurons, though recent models propose that initial pathology may start either in the brain (olfactory bulb or amygdala, \"brain-first\" subtype) or in the enteric nervous system (\"body-first\" subtype) [SOURCE_20] [SOURCE_54].\n\nThe rising global prevalence of PD resembles characteristics of a pandemic, with marked variations across time, geography, ethnicity, age, and sex [SOURCE_17] [SOURCE_19]. Prevalence has increased beyond what demographic changes alone would explain, with a doubling of cases reported between 1995 and 2015 and a further doubling projected [SOURCE_48] [SOURCE_19]. PD is increasingly recognized as a multisystem disorder with prodromal non-motor symptoms appearing years or even decades before classic motor manifestations [SOURCE_51] [SOURCE_21]. Two biological definition systems proposed in 2024 both center on the presence or absence of pathological α-synuclein, which could reshape how PD is classified and diagnosed going forward [SOURCE_41] [SOURCE_24]. No pharmacological agents currently prevent PD onset or definitively halt its progression, making disease-modifying therapies an urgent unmet need [SOURCE_25] [SOURCE_41]."
+    },
+    "standard_of_care": {
+      "title": "Current Standard of Care",
+      "content": "The cornerstone of PD pharmacotherapy remains dopamine replacement. Carbidopa/levodopa is FDA-approved for the treatment of Parkinson's disease, post-encephalitic parkinsonism, and symptomatic parkinsonism, and functions by allowing patients to benefit from lower doses of levodopa while reducing nausea and vomiting [SOURCE_40]. According to the American Academy of Neurology (AAN) guideline (originally published 2021, reaffirmed February 2025), treatment with levodopa provides superior benefit in reducing motor symptoms compared to dopamine agonists or MAO-B inhibitors [SOURCE_41].\n\nNon-ergot dopamine agonists represent an important adjunctive or alternative class. Pramipexole dihydrochloride extended-release tablets are FDA-approved for the treatment of Parkinson's disease [SOURCE_36]. Ropinirole hydrochloride is similarly FDA-approved for PD treatment [SOURCE_37]. While dopamine agonists are less likely to cause dyskinesia than levodopa, they carry higher risks of impulse-control disorders (compulsive gambling, eating, shopping, or sexual activity) and hallucinations [SOURCE_41]. Updated levodopa dose equivalency conversion formulae have been systematically reviewed to enable cross-comparison of drug regimens across clinical trials [SOURCE_53].\n\nBeyond pharmacotherapy, deep brain stimulation (DBS) is a widely used therapy for PD, and the German Society of Neurology (DGN) 2024 guideline includes recommendations for non-oral therapies such as pump therapy and DBS alongside tailored pharmacological combinations for motor complications [SOURCE_41] [SOURCE_34]. Updated guidelines also cover management of cognitive, affective, psychotic, and autonomic symptoms [SOURCE_41]. The 2024 Lancet series emphasizes that although dopamine replacement remains central, the onset of motor fluctuations and dyskinesia may require a range of medical and surgical approaches from a multidisciplinary team [SOURCE_41].\n\nExercise and rehabilitation are increasingly recognized as essential components of PD management. Aerobic exercise has been shown in randomized controlled trials to attenuate motor symptom progression and alter brain function and structure in the corticostriatal sensorimotor network [SOURCE_26] [SOURCE_25]. Treadmill training and physiotherapy both improve dual-task gait performance [SOURCE_27], and clinical Pilates, LSVT BIG protocols, augmented/virtual reality gait training, and motor-cognitive training all demonstrate benefits for balance and gait [SOURCE_28] [SOURCE_29] [SOURCE_33] [SOURCE_52]. Home physical therapy and telerehabilitation have been compared as delivery modalities to improve motor function and quality of life [SOURCE_32].",
+      "approved_therapies": [
+        {
+          "name": "Carbidopa/Levodopa",
+          "drug_class": "Aromatic amino acid decarboxylase inhibitor + dopamine precursor",
+          "regulatory_status": "FDA-approved for Parkinson's disease",
+          "approval_year": null,
+          "citation_index": 40
+        },
+        {
+          "name": "Pramipexole dihydrochloride",
+          "drug_class": "Non-ergot dopamine agonist",
+          "regulatory_status": "FDA-approved for Parkinson's disease",
+          "approval_year": null,
+          "citation_index": 36
+        },
+        {
+          "name": "Ropinirole hydrochloride",
+          "drug_class": "Non-ergoline dopamine agonist",
+          "regulatory_status": "FDA-approved for Parkinson's disease",
+          "approval_year": null,
+          "citation_index": 37
+        }
+      ]
+    },
+    "emerging_treatments": {
+      "title": "Emerging Treatments in Development",
+      "content": "The PD clinical pipeline is robust, with 136 active Phase 1–3 drug therapy trials registered on ClinicalTrials.gov as of January 31, 2024. Of these, 76 (56%) target symptomatic treatment and 60 (44%) are designated disease-modifying. More than half (58%) are in Phase 2, followed by Phase 1 (30%) and Phase 3 (12%), underscoring that only a limited number of disease-modifying candidates are transitioning to late-stage development [SOURCE_41].\n\n**Disease-Modifying Candidates — α-Synuclein-Targeting:** Prasinezumab, an investigational anti-α-synuclein monoclonal antibody developed by Hoffmann-La Roche, has completed a Phase 2 randomized, double-blind, placebo-controlled trial in participants with early PD on stable symptomatic medication [SOURCE_13]. It has now advanced to a Phase 3 trial (currently recruiting) evaluating efficacy, safety, and pharmacokinetics in participants with early-stage PD on stable symptomatic levodopa monotherapy [SOURCE_15].\n\n**GLP-1 Receptor Agonists:** Lixisenatide, a GLP-1 receptor agonist used for diabetes, showed neuroprotective properties in a mouse model and was tested in a Phase 2 randomized, placebo-controlled trial in 156 participants with early PD. At 12 months, motor disability (MDS-UPDRS Part III) worsened by 3.04 points in the placebo group but was essentially unchanged (−0.04 points) in the lixisenatide group, a statistically significant difference of 3.08 points (95% CI 0.86–5.30; P=0.007), though gastrointestinal side effects were noted [SOURCE_35] [SOURCE_41]. Additionally, a Phase 3 trial of exenatide (investigational, another GLP-1 receptor agonist) with 96-week exposure was conducted in the UK to confirm earlier positive results [SOURCE_41].\n\n**Cell-Based Therapies:** A published Phase I/II trial of iPSC-derived dopaminergic cells for PD demonstrated that initial cell therapies using fetal tissues showed promise but had complications and ethical concerns, motivating the development of iPSC-based approaches [SOURCE_30]. XS411, an investigational human allogeneic iPSC-derived dopaminergic neural progenitor cell injection developed by XellSmart Bio-Pharmaceutical, is in a Phase I/II clinical study for early-onset Parkinson's disease using a 3+3 dose-escalation design [SOURCE_9]. Separately, Mass General Brigham treated its first patient in September 2024 in a Phase 1 autologous iPSC-derived cell therapy trial [SOURCE_41].\n\n**Symptomatic and Adjunctive Investigational Therapies:** Lenrispodun (investigational), sponsored by Intra-Cellular Therapies, is being evaluated in a Phase 2 randomized, double-blind, placebo-controlled trial as adjunctive therapy for motor fluctuations (wearing-off symptoms) in PD patients on levodopa [SOURCE_3]. BHV-8000 (investigational), sponsored by Biohaven Therapeutics, is in a Phase 2 trial for adults with early PD to assess efficacy, safety, and tolerability [SOURCE_5]. CTC-413 (investigational), a combination of pramipexole ER with aprepitant from Chase Therapeutics, is in a Phase 2 study for parkinsonian-type disorders [SOURCE_6].\n\n**Repurposed Agents Under Investigation:** Donepezil (FDA-approved for Alzheimer's disease) is being studied in a Phase 2 trial at the University of Virginia to investigate the cholinergic contribution to gait dysfunction in PD [SOURCE_4]. Levetiracetam (an anti-epileptic drug) is in a Phase 2 proof-of-concept trial at the University of Queensland targeting memory problems in PD, with neuroimaging used to assess effects on hippocampal circuits implicated in dementia risk [SOURCE_11]. Pyridostigmine bromide is in a Phase 2 trial at the University of Vermont Medical Center for the treatment of constipation in PD, a common non-motor symptom with no current standardized treatment algorithm [SOURCE_46]. Fexofenadine is being explored as adjuvant therapy alongside levodopa/carbidopa in a Phase 2 trial at Tanta University [SOURCE_8]. Tributyrin, a butyrate supplement, is in a Phase 1/2 trial evaluating its effects on cognition, walking, and balance in PD patients with cognitive impairments [SOURCE_12]. Fecal microbiota transplantation has been tested in a randomized, placebo-controlled trial to assess its impact on microbiota engraftment in PD patients, given evidence linking gut dysbiosis to PD occurrence and progression [SOURCE_31].\n\n**Adaptive Deep Brain Stimulation:** A blinded randomized feasibility trial compared chronic adaptive (feedback-controlled) DBS versus conventional stimulation in PD, exploring whether dynamic responsiveness to changing neural states could improve therapeutic effectiveness [SOURCE_34]. A separate Phase 4 mechanistic study is investigating personalized real-time DBS in patients undergoing standard-of-care implantation [SOURCE_14].\n\n**Neuroinflammation and Biomarker Imaging:** Multiple trials are advancing neuroinflammation imaging biomarkers. [18F]DPA-714 PET is being used in both a Phase 1 study at UAB to measure activated brain microglia/macrophages [SOURCE_2] and a Phase 2 multicenter study assessing the link between microglial activation and dopaminergic denervation kinetics in early PD [SOURCE_7]. [18F]AV-133 PET imaging is under longitudinal evaluation in prodromal PD participants through the PPMI initiative to track disease progression over 24 months [SOURCE_1].",
+      "pipeline_items": [
+        {
+          "name": "Prasinezumab (Phase 2)",
+          "nct_id": "NCT04777331",
+          "phase": "Phase 2",
+          "sponsor": "Hoffmann-La Roche",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 13
+        },
+        {
+          "name": "Prasinezumab (Phase 3)",
+          "nct_id": "NCT07174310",
+          "phase": "Phase 3",
+          "sponsor": "Hoffmann-La Roche",
+          "status": "RECRUITING",
+          "citation_index": 15
+        },
+        {
+          "name": "Lenrispodun",
+          "nct_id": "NCT05766813",
+          "phase": "Phase 2",
+          "sponsor": "Intra-Cellular Therapies, Inc.",
+          "status": "RECRUITING",
+          "citation_index": 3
+        },
+        {
+          "name": "BHV-8000",
+          "nct_id": "NCT06976268",
+          "phase": "Phase 2",
+          "sponsor": "Biohaven Therapeutics Ltd.",
+          "status": "RECRUITING",
+          "citation_index": 5
+        },
+        {
+          "name": "CTC-413 (Pramipexole ER + Aprepitant)",
+          "nct_id": "NCT03683225",
+          "phase": "Phase 2",
+          "sponsor": "Chase Therapeutics Corporation",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 6
+        },
+        {
+          "name": "XS411 (iPSC-derived dopaminergic neural progenitor cells)",
+          "nct_id": "NCT07166757",
+          "phase": "Phase 1/2",
+          "sponsor": "XellSmart Bio-Pharmaceutical (Suzhou) Co., Ltd.",
+          "status": "RECRUITING",
+          "citation_index": 9
+        },
+        {
+          "name": "Donepezil for gait dysfunction",
+          "nct_id": "NCT06903910",
+          "phase": "Phase 2",
+          "sponsor": "University of Virginia",
+          "status": "RECRUITING",
+          "citation_index": 4
+        },
+        {
+          "name": "Levetiracetam for cognitive impairment in PD",
+          "nct_id": "NCT04643327",
+          "phase": "Phase 2",
+          "sponsor": "The University of Queensland",
+          "status": "RECRUITING",
+          "citation_index": 11
+        },
+        {
+          "name": "Pyridostigmine for constipation in PD",
+          "nct_id": "NCT05603715",
+          "phase": "Phase 2",
+          "sponsor": "University of Vermont Medical Center",
+          "status": "RECRUITING",
+          "citation_index": 46
+        },
+        {
+          "name": "Tributyrin for cognitive impairments in PD",
+          "nct_id": "NCT07154511",
+          "phase": "Phase 1/2",
+          "sponsor": "Prabesh Kanel (investigator-sponsored)",
+          "status": "RECRUITING",
+          "citation_index": 12
+        },
+        {
+          "name": "Fexofenadine as adjuvant therapy in PD",
+          "nct_id": "NCT06785298",
+          "phase": "Phase 2",
+          "sponsor": "Tanta University",
+          "status": "RECRUITING",
+          "citation_index": 8
+        },
+        {
+          "name": "Adaptive Deep Brain Stimulation (feasibility trial)",
+          "nct_id": null,
+          "phase": "Feasibility / Pilot",
+          "sponsor": "Not specified in source",
+          "status": "Published results (2024)",
+          "citation_index": 34
+        },
+        {
+          "name": "Personalized Real-Time DBS Mechanisms Study",
+          "nct_id": "NCT06013956",
+          "phase": "Phase 4 (mechanistic)",
+          "sponsor": "David Escobar (investigator-sponsored)",
+          "status": "RECRUITING",
+          "citation_index": 14
+        },
+        {
+          "name": "[18F]AV-133 Prodromal PD Imaging (PPMI)",
+          "nct_id": "NCT07265596",
+          "phase": "Phase 2",
+          "sponsor": "Michael J. Fox Foundation for Parkinson's Research",
+          "status": "RECRUITING",
+          "citation_index": 1
+        },
+        {
+          "name": "[18F]DPA-714 Neuroinflammation Imaging (UAB)",
+          "nct_id": "NCT03457493",
+          "phase": "Phase 1",
+          "sponsor": "University of Alabama at Birmingham",
+          "status": "RECRUITING",
+          "citation_index": 2
+        },
+        {
+          "name": "[18F]DPA-714 Biomarker for PD Progression",
+          "nct_id": "NCT03230526",
+          "phase": "Phase 2",
+          "sponsor": "Nantes University Hospital",
+          "status": "ACTIVE_NOT_RECRUITING",
+          "citation_index": 7
+        }
+      ]
+    },
+    "key_players": {
+      "title": "Key Companies and Institutions",
+      "content": "The Parkinson's disease landscape involves a mix of major pharmaceutical companies, specialty biotechnology firms, academic medical centers, and non-profit foundations.\n\nHoffmann-La Roche is the most prominent large pharmaceutical player in the current pipeline, sponsoring both the Phase 2 and Phase 3 trials of prasinezumab (investigational), the furthest-advanced anti-α-synuclein antibody in development [SOURCE_13] [SOURCE_15]. Intra-Cellular Therapies, Inc. is developing lenrispodun (investigational) for motor fluctuations in PD [SOURCE_3]. Biohaven Therapeutics Ltd. is advancing BHV-8000 (investigational) in early PD [SOURCE_5]. Chase Therapeutics Corporation is evaluating CTC-413 (investigational) for parkinsonian disorders [SOURCE_6]. XellSmart Bio-Pharmaceutical (Suzhou) Co., Ltd. is pursuing iPSC-derived cell therapy (XS411, investigational) for early-onset PD [SOURCE_9].\n\nAcademic and medical institutions are leading multiple investigator-sponsored trials. The University of Virginia is studying donepezil for gait dysfunction [SOURCE_4]; the University of Queensland is testing levetiracetam for PD-related cognitive impairment [SOURCE_11]; the University of Vermont Medical Center is evaluating pyridostigmine for PD-associated constipation [SOURCE_46]; Tanta University is investigating fexofenadine as adjuvant therapy [SOURCE_8]; and Teachers College, Columbia University is conducting a rehabilitation trial for airway protection in PD [SOURCE_10]. The University of Alabama at Birmingham and Nantes University Hospital are advancing neuroinflammation PET imaging biomarker studies [SOURCE_2] [SOURCE_7].\n\nThe Michael J. Fox Foundation for Parkinson's Research plays a central role in biomarker development, sponsoring the PPMI [18F]AV-133 prodromal imaging study [SOURCE_1]. Mass General Brigham has initiated a first-in-human autologous iPSC-derived dopaminergic cell therapy trial [SOURCE_41].",
+      "entities": [
+        {
+          "name": "Hoffmann-La Roche",
+          "type": "pharmaceutical",
+          "role": "Sponsor of prasinezumab (investigational anti-α-synuclein antibody) in Phase 2 and Phase 3 trials for early PD",
+          "citation_indices": [
+            13,
+            15
+          ]
+        },
+        {
+          "name": "Intra-Cellular Therapies, Inc.",
+          "type": "pharmaceutical",
+          "role": "Sponsor of lenrispodun (investigational) Phase 2 trial for motor fluctuations in PD",
+          "citation_indices": [
+            3
+          ]
+        },
+        {
+          "name": "Biohaven Therapeutics Ltd.",
+          "type": "biotechnology",
+          "role": "Sponsor of BHV-8000 (investigational) Phase 2 trial for early PD",
+          "citation_indices": [
+            5
+          ]
+        },
+        {
+          "name": "Chase Therapeutics Corporation",
+          "type": "biotechnology",
+          "role": "Sponsor of CTC-413 (investigational) Phase 2 trial for parkinsonian disorders",
+          "citation_indices": [
+            6
+          ]
+        },
+        {
+          "name": "XellSmart Bio-Pharmaceutical (Suzhou) Co., Ltd.",
+          "type": "biotechnology",
+          "role": "Developer of XS411 (investigational iPSC-derived dopaminergic neural progenitor cell injection) in Phase 1/2 for early-onset PD",
+          "citation_indices": [
+            9
+          ]
+        },
+        {
+          "name": "Michael J. Fox Foundation for Parkinson's Research",
+          "type": "non-profit foundation",
+          "role": "Sponsor of the PPMI [18F]AV-133 prodromal imaging longitudinal study",
+          "citation_indices": [
+            1
+          ]
+        },
+        {
+          "name": "University of Virginia",
+          "type": "academic",
+          "role": "Investigating cholinergic contribution to gait dysfunction using donepezil in Phase 2 trial",
+          "citation_indices": [
+            4
+          ]
+        },
+        {
+          "name": "The University of Queensland",
+          "type": "academic",
+          "role": "Conducting Phase 2 proof-of-concept trial of levetiracetam for cognitive impairment in PD",
+          "citation_indices": [
+            11
+          ]
+        },
+        {
+          "name": "University of Vermont Medical Center",
+          "type": "academic",
+          "role": "Evaluating pyridostigmine for constipation in PD in a Phase 2 trial",
+          "citation_indices": [
+            46
+          ]
+        },
+        {
+          "name": "University of Alabama at Birmingham",
+          "type": "academic",
+          "role": "Conducting Phase 1 neuroinflammation PET imaging substudy using [18F]DPA-714",
+          "citation_indices": [
+            2
+          ]
+        },
+        {
+          "name": "Nantes University Hospital",
+          "type": "academic",
+          "role": "Leading Phase 2 multicenter biomarker study linking microglial activation to dopaminergic denervation in early PD",
+          "citation_indices": [
+            7
+          ]
+        },
+        {
+          "name": "Mass General Brigham",
+          "type": "academic medical center",
+          "role": "Initiated Phase 1 autologous iPSC-derived cell therapy trial for PD (first patient treated September 2024)",
+          "citation_indices": [
+            41
+          ]
+        }
+      ]
+    },
+    "recent_developments": {
+      "title": "Recent Developments",
+      "content": "Several significant developments have shaped the PD landscape in 2024–2025:\n\n**GLP-1 Receptor Agonist Class Emerges as a Disease-Modification Candidate:** The Phase 2 LIXIPARK trial of lixisenatide (investigational for PD) published in the New England Journal of Medicine in April 2024 demonstrated that participants with early PD receiving lixisenatide showed essentially no motor disability progression over 12 months (MDS-UPDRS Part III change of −0.04 points), compared to 3.04 points of worsening in the placebo group (difference 3.08 points; 95% CI 0.86–5.30; P=0.007) [SOURCE_35] [SOURCE_41]. This has been followed by a Phase 3 trial of exenatide (investigational for PD), another GLP-1 receptor agonist, with 96-week exposure, published in The Lancet in February 2025 [SOURCE_41]. These results have positioned the GLP-1 agonist class as one of the most closely watched disease-modification strategies in PD.\n\n**Prasinezumab Advances to Phase 3:** Following Phase 2 results, Hoffmann-La Roche has initiated a Phase 3 randomized, double-blind, placebo-controlled trial of prasinezumab (investigational) in participants with early-stage PD on stable levodopa monotherapy [SOURCE_15]. This represents one of the few α-synuclein-targeting therapies to reach Phase 3, a stage where the overall PD pipeline remains thin (only 12% of active trials are Phase 3) [SOURCE_41].\n\n**iPSC-Derived Cell Therapy Milestones:** A Phase I/II trial of iPSC-derived dopaminergic cells for Parkinson's disease was published in Nature in 2025, marking a landmark in regenerative approaches [SOURCE_30]. Separately, a Phase I/II trial of XS411, an allogeneic iPSC-derived dopaminergic neural progenitor cell injection, is recruiting for early-onset PD [SOURCE_9], and Mass General Brigham treated its first patient with an autologous iPSC-derived cell therapy in September 2024 [SOURCE_41].\n\n**Adaptive Deep Brain Stimulation Shows Feasibility:** A blinded randomized crossover pilot trial published in Nature Medicine in 2024 demonstrated the feasibility of chronic adaptive DBS, which uses feedback control to dynamically respond to changing clinical and neural states. The trial explored whether this approach could improve therapeutic effectiveness over conventional stimulation [SOURCE_34].\n\n**Evolving Disease Definitions and Biomarker Strategies:** Two new biological definition systems for PD were proposed in early 2024, both centering on the presence or absence of pathological α-synuclein. This shift toward biologically based classification is intended to enable earlier detection—ideally in the prodromal phase—and to improve clinical trial design for disease-modifying therapies [SOURCE_41] [SOURCE_24]. Longitudinal imaging studies using [18F]AV-133 PET in prodromal PD participants (PPMI initiative) [SOURCE_1] and neuroinflammation imaging with [18F]DPA-714 [SOURCE_2] [SOURCE_7] are actively advancing biomarker development for tracking disease progression and treatment response.\n\n**Gut-Brain Axis and Microbiome Interventions:** A randomized, placebo-controlled trial of fecal microbiota transplantation in PD patients has produced clinical results, reflecting the growing evidence base linking gut dysbiosis to PD pathogenesis [SOURCE_31]. The body-first versus brain-first model of PD, updated in 2024, posits that enteric nervous system pathology may initiate the disease in a subset of patients, reinforcing the rationale for gut-targeted interventions [SOURCE_54].\n\n**Exercise and Rehabilitation Evidence Strengthens:** A 2022 randomized controlled trial demonstrated that aerobic exercise alters brain function and structure in the corticostriatal sensorimotor network in PD, providing a mechanistic basis for exercise-related clinical improvements [SOURCE_26]. A 2024 review emphasized that no pharmacological agents currently prevent PD evolution or progression, and that exercise remains one of the most promising interventions with potential to modify disease trajectory [SOURCE_25]. New evidence in 2024 also compared home physical therapy with telerehabilitation modalities for motor function improvement in PD [SOURCE_32].\n\n**Repurposed Drug Investigations Expand:** Multiple repurposed agents are under active Phase 2 investigation for non-motor PD symptoms, including levetiracetam for dementia risk reduction [SOURCE_11], pyridostigmine for constipation [SOURCE_46], donepezil for gait dysfunction [SOURCE_4], and tributyrin for cognitive impairments [SOURCE_12]. These trials address critical unmet needs, as non-motor symptoms are often among the most disabling and treatment-refractory features of PD [SOURCE_41]."
+    }
+  },
+  "references": [
+    {
+      "index": 1,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07265596",
+      "title": "Early Longitudinal Imaging in the Parkinson's Progressive Marker Initiative (PPMI) Using (18F)AV-133 (PPMI AV-133 Prodromal Imaging)",
+      "url": "https://clinicaltrials.gov/study/NCT07265596",
+      "pub_date": "2023-10-30",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 2,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT03457493",
+      "title": "The University of Alabama At Birmingham (UAB) Neuroinflammation in Parkinson's Disease-TSPO- Positron Emission Tomography (PET) Substudy",
+      "url": "https://clinicaltrials.gov/study/NCT03457493",
+      "pub_date": "2018-03-22",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 3,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05766813",
+      "title": "Lenrispodun as Adjunctive Therapy in the Treatment of Patients With Motor Fluctuations Due to Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT05766813",
+      "pub_date": "2023-03-13",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 4,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06903910",
+      "title": "Investigating the Cholinergic Contribution to Gait Dysfunction in Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT06903910",
+      "pub_date": "2024-11-01",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 5,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06976268",
+      "title": "A Study to Determine if BHV-8000 is Effective, Safe and Tolerable as a Treatment for Adults Living With Early Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT06976268",
+      "pub_date": "2025-05-28",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 6,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT03683225",
+      "title": "A Study to Evaluate in Patients With Parkinsonian Type Disorders",
+      "url": "https://clinicaltrials.gov/study/NCT03683225",
+      "pub_date": "2019-04-01",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 7,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT03230526",
+      "title": "Identification of a Biomarker Predictive of Evolution of Parkinson Disease",
+      "url": "https://clinicaltrials.gov/study/NCT03230526",
+      "pub_date": "2018-04-16",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 8,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06785298",
+      "title": "Fexofenadine as Adjuvant Therapy in Parkinson Disease",
+      "url": "https://clinicaltrials.gov/study/NCT06785298",
+      "pub_date": "2024-12-10",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 9,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07166757",
+      "title": "Clinical Study to Evaluate XS411 in Treatment of Early-onset Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT07166757",
+      "pub_date": "2025-09-22",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 10,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05700825",
+      "title": "Rehabilitation of Airway Protection in Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT05700825",
+      "pub_date": "2022-08-11",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 11,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT04643327",
+      "title": "Uncovering a Novel Therapeutic Target to Reduce Dementia Risk in Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT04643327",
+      "pub_date": "2021-02-09",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 12,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07154511",
+      "title": "Phase 2 Trial of Tributyrin in People With Parkinson's Disease and Cognitive Impairments",
+      "url": "https://clinicaltrials.gov/study/NCT07154511",
+      "pub_date": "2025-11-07",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 13,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT04777331",
+      "title": "A Study to Evaluate the Efficacy and Safety of Intravenous Prasinezumab in Participants With Early Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT04777331",
+      "pub_date": "2021-05-05",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 14,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06013956",
+      "title": "Personalized Real-Time DBS and PD Mechanisms",
+      "url": "https://clinicaltrials.gov/study/NCT06013956",
+      "pub_date": "2023-08-29",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 15,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07174310",
+      "title": "A Study to Evaluate the Efficacy and Safety of Intravenous (IV) Prasinezumab in Participants With Early-Stage Parkinson's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT07174310",
+      "pub_date": "2025-11-24",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 16,
+      "source_type": "pubmed",
+      "identifier": "PMID:30890425",
+      "title": "Parkinson's Disease and Parkinsonism.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30890425/",
+      "pub_date": "2019",
+      "journal": "The American journal of medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 17,
+      "source_type": "pubmed",
+      "identifier": "PMID:33848468",
+      "title": "Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33848468/",
+      "pub_date": "2021",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 18,
+      "source_type": "pubmed",
+      "identifier": "PMID:39083773",
+      "title": "Parkinson's Disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39083773/",
+      "pub_date": "2024",
+      "journal": "The New England journal of medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 19,
+      "source_type": "pubmed",
+      "identifier": "PMID:38245248",
+      "title": "The epidemiology of Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38245248/",
+      "pub_date": "2024",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 20,
+      "source_type": "pubmed",
+      "identifier": "PMID:38245249",
+      "title": "The pathogenesis of Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38245249/",
+      "pub_date": "2024",
+      "journal": "Lancet (London, England)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 21,
+      "source_type": "pubmed",
+      "identifier": "PMID:30704685",
+      "title": "Parkinson's Disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30704685/",
+      "pub_date": "2019",
+      "journal": "The Medical clinics of North America",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 22,
+      "source_type": "pubmed",
+      "identifier": "PMID:31625879",
+      "title": "[Parkinson's Disease: Clinical Review and Update].",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31625879/",
+      "pub_date": "2019",
+      "journal": "Acta medica portuguesa",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 23,
+      "source_type": "pubmed",
+      "identifier": "PMID:32576618",
+      "title": "Parkinson's disease: etiopathogenesis and treatment.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32576618/",
+      "pub_date": "2020",
+      "journal": "Journal of neurology, neurosurgery, and psychiatry",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 24,
+      "source_type": "pubmed",
+      "identifier": "PMID:38489197",
+      "title": "Defining Parkinson's Disease: Past and Future.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38489197/",
+      "pub_date": "2024",
+      "journal": "Journal of Parkinson's disease",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 25,
+      "source_type": "pubmed",
+      "identifier": "PMID:38418216",
+      "title": "Exercise as medicine in Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38418216/",
+      "pub_date": "2024",
+      "journal": "Journal of neurology, neurosurgery, and psychiatry",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:50Z"
+    },
+    {
+      "index": 26,
+      "source_type": "pubmed",
+      "identifier": "PMID:34951063",
+      "title": "Aerobic Exercise Alters Brain Function and Structure in Parkinson's Disease: A Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34951063/",
+      "pub_date": "2022",
+      "journal": "Annals of neurology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 27,
+      "source_type": "pubmed",
+      "identifier": "PMID:35697942",
+      "title": "Treadmill training and physiotherapy similarly improve dual task gait performance: a randomized-controlled trial in Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35697942/",
+      "pub_date": "2022",
+      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 28,
+      "source_type": "pubmed",
+      "identifier": "PMID:34726472",
+      "title": "Effect of clinical Pilates training on balance and postural control in patients with Parkinson's disease: a randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34726472/",
+      "pub_date": "2021",
+      "journal": "Journal of comparative effectiveness research",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 29,
+      "source_type": "pubmed",
+      "identifier": "PMID:38451007",
+      "title": "The effects of standard and modified LSVT BIG therapy protocols on balance and gait in Parkinson's disease: A randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38451007/",
+      "pub_date": "2024",
+      "journal": "Brain and behavior",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 30,
+      "source_type": "pubmed",
+      "identifier": "PMID:40240591",
+      "title": "Phase I/II trial of iPS-cell-derived dopaminergic cells for Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40240591/",
+      "pub_date": "2025",
+      "journal": "Nature",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 31,
+      "source_type": "pubmed",
+      "identifier": "PMID:38057970",
+      "title": "Efficacy of fecal microbiota transplantation in patients with Parkinson's disease: clinical trial results from a randomized, placebo-controlled design.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38057970/",
+      "pub_date": "2023",
+      "journal": "Gut microbes",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 32,
+      "source_type": "pubmed",
+      "identifier": "PMID:39578754",
+      "title": "Home physical therapy versus telerehabilitation in improving motor function and quality of life in Parkinson's disease: a randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39578754/",
+      "pub_date": "2024",
+      "journal": "BMC geriatrics",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 33,
+      "source_type": "pubmed",
+      "identifier": "PMID:36443623",
+      "title": "The effects of augmented and virtual reality gait training on balance and gait in patients with Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36443623/",
+      "pub_date": "2023",
+      "journal": "Acta neurologica Belgica",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 34,
+      "source_type": "pubmed",
+      "identifier": "PMID:39160351",
+      "title": "Chronic adaptive deep brain stimulation versus conventional stimulation in Parkinson's disease: a blinded randomized feasibility trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39160351/",
+      "pub_date": "2024",
+      "journal": "Nature medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 35,
+      "source_type": "pubmed",
+      "identifier": "PMID:38598572",
+      "title": "Trial of Lixisenatide in Early Parkinson's Disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38598572/",
+      "pub_date": "2024",
+      "journal": "The New England journal of medicine",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:51:51Z"
+    },
+    {
+      "index": 36,
+      "source_type": "openfda",
+      "identifier": "LABEL:Pramipexole dihydrochloride",
+      "title": "Pramipexole dihydrochloride (PRAMIPEXOLE DIHYDROCHLORIDE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 37,
+      "source_type": "openfda",
+      "identifier": "LABEL:ROPINIROLE HYDROCHLORIDE",
+      "title": "ROPINIROLE HYDROCHLORIDE (ROPINIROLE HYDROCHLORIDE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 38,
+      "source_type": "openfda",
+      "identifier": "LABEL:BACLOFEN",
+      "title": "BACLOFEN (BACLOFEN)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 39,
+      "source_type": "openfda",
+      "identifier": "LABEL:Baclofen",
+      "title": "Baclofen (BACLOFEN)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 40,
+      "source_type": "openfda",
+      "identifier": "LABEL:Carbidopa and Levodopa",
+      "title": "Carbidopa and Levodopa (CARBIDOPA AND LEVODOPA)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:51:48Z"
+    },
+    {
+      "index": 41,
+      "source_type": "web_search",
+      "identifier": "WEB:web_search",
+      "title": "Web Search Results",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:51Z"
+    },
+    {
+      "index": 42,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT04812002",
+      "title": "Study of PD-1 Antibody and Bevacizumab in the Treatment of High-risk GTN After Combined Chemotherapy",
+      "url": "https://clinicaltrials.gov/study/NCT04812002",
+      "pub_date": "2021-04-15",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:54Z"
+    },
+    {
+      "index": 43,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06966700",
+      "title": "A Clinical Study of Sacituzumab Tirumotecan (Sac-TMT, MK-2870) in People With Breast Cancer (MK-2870-032)",
+      "url": "https://clinicaltrials.gov/study/NCT06966700",
+      "pub_date": "2025-06-30",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:54Z"
+    },
+    {
+      "index": 44,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT04706910",
+      "title": "18F-DOPA II - PET Imaging Optimization",
+      "url": "https://clinicaltrials.gov/study/NCT04706910",
+      "pub_date": "2021-01-20",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:54Z"
+    },
+    {
+      "index": 45,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT07252739",
+      "title": "KEYMAKER-U01 Substudy 01J: A Study of Pembrolizumab Plus MK-1084 in Participants With Non-Small Cell Lung Cancer (NSCLC) With Kirsten Rat Sarcoma Viral Oncogene Homolog (KRAS) G12C Mutations (MK-3475-01J/KEYMAKER-U01J)",
+      "url": "https://clinicaltrials.gov/study/NCT07252739",
+      "pub_date": "2025-12-19",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:54Z"
+    },
+    {
+      "index": 46,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT05603715",
+      "title": "Pyridostigmine for the Treatment of Constipation in Parkinson Disease",
+      "url": "https://clinicaltrials.gov/study/NCT05603715",
+      "pub_date": "2022-08-10",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:54Z"
+    },
+    {
+      "index": 47,
+      "source_type": "clinicaltrials",
+      "identifier": "NCT06445972",
+      "title": "Substudy 06D: Combination Therapies in Second Line (2L) Gastroesophageal Adenocarcinoma (MK-3475-06D/Keymaker-U06)",
+      "url": "https://clinicaltrials.gov/study/NCT06445972",
+      "pub_date": "2024-08-07",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:54Z"
+    },
+    {
+      "index": 48,
+      "source_type": "pubmed",
+      "identifier": "PMID:37735139",
+      "title": "Pain in Parkinson's Disease: Pathophysiology, Classification and Treatment.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37735139/",
+      "pub_date": "2023",
+      "journal": "Journal of integrative neuroscience",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 49,
+      "source_type": "pubmed",
+      "identifier": "PMID:39102007",
+      "title": "Neuroplasticity in Parkinson's disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39102007/",
+      "pub_date": "2024",
+      "journal": "Journal of neural transmission (Vienna, Austria : 1996)",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 50,
+      "source_type": "pubmed",
+      "identifier": "PMID:38879999",
+      "title": "Update: Protective and risk factors for Parkinson disease.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38879999/",
+      "pub_date": "2024",
+      "journal": "Parkinsonism & related disorders",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 51,
+      "source_type": "pubmed",
+      "identifier": "PMID:35994167",
+      "title": "Parkinson's Disease: A Multisystem Disorder.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35994167/",
+      "pub_date": "2023",
+      "journal": "Neuroscience bulletin",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 52,
+      "source_type": "pubmed",
+      "identifier": "PMID:36820916",
+      "title": "Effects of motor-cognitive training on dual-task performance in people with Parkinson's disease: a systematic review and meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36820916/",
+      "pub_date": "2023",
+      "journal": "Journal of neurology",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 53,
+      "source_type": "pubmed",
+      "identifier": "PMID:37147135",
+      "title": "Levodopa Dose Equivalency in Parkinson's Disease: Updated Systematic Review and Proposals.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37147135/",
+      "pub_date": "2023",
+      "journal": "Movement disorders : official journal of the Movement Disorder Society",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 54,
+      "source_type": "pubmed",
+      "identifier": "PMID:38519273",
+      "title": "Brain-first vs. body-first Parkinson's disease: An update on recent evidence.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38519273/",
+      "pub_date": "2024",
+      "journal": "Parkinsonism & related disorders",
+      "is_preprint": false,
+      "jurisdiction": null,
+      "retrieved_at": "2026-02-27T00:52:55Z"
+    },
+    {
+      "index": 55,
+      "source_type": "openfda",
+      "identifier": "LABEL:Verapamil Hydrochloride",
+      "title": "Verapamil Hydrochloride (VERAPAMIL HYDROCHLORIDE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:52:53Z"
+    },
+    {
+      "index": 56,
+      "source_type": "openfda",
+      "identifier": "LABEL:Verapamil hydrochloride",
+      "title": "Verapamil hydrochloride (VERAPAMIL HYDROCHLORIDE)",
+      "url": "",
+      "pub_date": "",
+      "journal": null,
+      "is_preprint": false,
+      "jurisdiction": "FDA",
+      "retrieved_at": "2026-02-27T00:52:53Z"
+    }
+  ],
+  "report_caveats": [
+    "Approval status reflects FDA (US) only — EMA/international status not covered.",
+    "OpenFDA data is informational; verify critical approval details at DailyMed.",
+    "Dosing information is excluded from this report.",
+    "This report is for strategic intelligence purposes only — not clinical guidance."
+  ]
+}

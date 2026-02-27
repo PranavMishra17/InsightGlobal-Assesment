@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedBrief — {{ report.condition }}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+    }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 24px 40px;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header .meta { font-size: 0.82rem; color: #a5b4fc; margin-top: 4px; }
+    .container { max-width: 900px; margin: 32px auto; padding: 0 24px 80px; }
+    .nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .nav a {
+      padding: 6px 14px;
+      background: #e0e7ff;
+      color: #3730a3;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav a:hover { background: #c7d2fe; }
+
+    .report-section {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.06);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .report-section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0e7ff;
+    }
+    .report-section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #374151;
+      margin: 18px 0 10px;
+    }
+    .report-section p {
+      line-height: 1.75;
+      color: #374151;
+      font-size: 0.93rem;
+    }
+    sup a {
+      color: #4f46e5;
+      text-decoration: none;
+      font-size: 0.72em;
+    }
+    sup a:hover { text-decoration: underline; }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.87rem;
+      margin-top: 8px;
+    }
+    .data-table th {
+      background: #f0f4ff;
+      text-align: left;
+      padding: 8px 12px;
+      font-weight: 600;
+      color: #3730a3;
+      border-bottom: 2px solid #c7d2fe;
+    }
+    .data-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #f3f4f6;
+      color: #374151;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table a { color: #4f46e5; text-decoration: none; }
+    .data-table a:hover { text-decoration: underline; }
+
+    .entity-list { padding-left: 20px; }
+    .entity-list li { margin-bottom: 8px; font-size: 0.9rem; line-height: 1.6; }
+
+    #references .references-list {
+      padding-left: 20px;
+      font-size: 0.82rem;
+      color: #4b5563;
+    }
+    #references .references-list li { margin-bottom: 6px; line-height: 1.5; }
+    #references .references-list a { color: #4f46e5; }
+
+    .caveats {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-top: 20px;
+    }
+    .caveats h3 { font-size: 0.9rem; color: #92400e; margin-bottom: 8px; }
+    .caveats ul { padding-left: 18px; }
+    .caveats li { font-size: 0.82rem; color: #78350f; margin-bottom: 4px; line-height: 1.5; }
+
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9ca3af;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MedBrief — {{ report.condition }}</h1>
+    <div class="meta">
+      Generated {{ report.generated_at }} &nbsp;|&nbsp;
+      Sources: {{ report.data_sources_queried | join(', ') }} &nbsp;|&nbsp;
+      {{ report.references | length }} references
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="nav">
+      <a href="#overview">Overview</a>
+      <a href="#standard_of_care">Standard of Care</a>
+      <a href="#emerging_treatments">Emerging Treatments</a>
+      <a href="#key_players">Key Players</a>
+      <a href="#recent_developments">Recent Developments</a>
+      <a href="#references">References</a>
+    </nav>
+
+    {% set sections = report.sections %}
+    {% set refs = report.references %}
+
+    {% for key in ['overview', 'standard_of_care', 'emerging_treatments', 'key_players', 'recent_developments'] %}
+      {% if sections[key] is defined %}
+        {% set sec = sections[key] %}
+        <section id="{{ key }}" class="report-section">
+          <h2>{{ sec.title }}</h2>
+          <p>{{ sec.content | safe }}</p>
+
+          {% if sec.approved_therapies %}
+            <h3>Approved Therapies</h3>
+            <table class="data-table">
+              <thead><tr><th>Drug</th><th>Class</th><th>Status</th><th>Year</th></tr></thead>
+              <tbody>
+                {% for t in sec.approved_therapies %}
+                  <tr>
+                    <td>{{ t.name }}{% if t.citation_index %}<sup><a href="#ref-{{ t.citation_index }}">[{{ t.citation_index }}]</a></sup>{% endif %}</td>
+                    <td>{{ t.drug_class or '' }}</td>
+                    <td>{{ t.regulatory_status or '' }}</td>
+                    <td>{{ t.approval_year or '' }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+
+          {% if sec.pipeline_items %}
+            <h3>Pipeline</h3>
+            <table class="data-table">
+              <thead><tr><th>Trial / Compound</th><th>Phase</th><th>Status</th><th>Sponsor</th></tr></thead>
+              <tbody>
+                {% for p in sec.pipeline_items %}
+                  <tr>
+                    <td>
+                      {{ p.name }}
+                      {% if p.citation_index %}<sup><a href="#ref-{{ p.citation_index }}">[{{ p.citation_index }}]</a></sup>{% endif %}
+                      {% if p.nct_id %}
+                        <a href="https://clinicaltrials.gov/study/{{ p.nct_id }}" target="_blank">{{ p.nct_id }}</a>
+                      {% endif %}
+                    </td>
+                    <td>{{ p.phase or '' }}</td>
+                    <td>{{ p.status or '' }}</td>
+                    <td>{{ p.sponsor or '' }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+
+          {% if sec.entities %}
+            <ul class="entity-list">
+              {% for e in sec.entities %}
+                <li>
+                  <strong>{{ e.name }}</strong> ({{ e.type }}) — {{ e.role }}
+                  {% for i in e.citation_indices %}<sup><a href="#ref-{{ i }}">[{{ i }}]</a></sup>{% endfor %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </section>
+      {% endif %}
+    {% endfor %}
+
+    {% if refs %}
+      <section id="references" class="report-section">
+        <h2>References</h2>
+        <ol class="references-list">
+          {% for ref in refs %}
+            <li id="ref-{{ ref.index }}">
+              [{{ ref.index }}]
+              {% if ref.url %}
+                <a href="{{ ref.url }}" target="_blank">{{ ref.title or ref.identifier }}</a>
+              {% else %}
+                {{ ref.title or ref.identifier }}
+              {% endif %}
+              — {{ ref.source_type }}{% if ref.jurisdiction %} ({{ ref.jurisdiction }}){% endif %}
+              {% if ref.pub_date %} {{ ref.pub_date }}{% endif %}
+              {% if ref.is_preprint %} [PREPRINT]{% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+
+    {% if report.report_caveats %}
+      <div class="caveats">
+        <h3>Data Caveats</h3>
+        <ul>
+          {% for c in report.report_caveats %}
+            <li>{{ c }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+
+  <footer>MedBrief — for strategic intelligence purposes only. Not for clinical use.</footer>
+</body>
+</html>
