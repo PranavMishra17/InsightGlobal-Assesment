@@ -12,10 +12,9 @@ Enter a medical condition, get a 4-section research report with citations — st
 
 ## Demo
 
-<div align="center">
-  <img src="demo.gif" alt="MedBrief Demo" width="80%" />
-  <p><em>Generate a detailed intelligence briefing for any disease — covering standard of care, pipeline trials, FDA-approved therapies, key companies, and the latest clinical developments, all with verified citations.</em></p>
-</div>
+![MedBrief Demo](demo.gif)
+
+*Generate a detailed intelligence briefing for any disease — covering standard of care, pipeline trials, FDA-approved therapies, key companies, and the latest clinical developments, all with verified citations.*
 
 ---
 
