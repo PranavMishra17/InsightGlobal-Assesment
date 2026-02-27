@@ -5,7 +5,7 @@ import re
 import time
 
 from citation_registry import CitationRegistry
-from report_builder import build, render_html
+from report_builder import build
 from research_loop import ResearchLoop
 
 logger = logging.getLogger(__name__)
@@ -83,29 +83,12 @@ def run_orchestrator(session_id: str, condition: str) -> None:
 
     # Always attempt to store and complete — even with a degraded report
     try:
-        sections = report.get("sections", {})
-        section_order = [
-            "overview", "standard_of_care", "emerging_treatments",
-            "key_players", "recent_developments",
-        ]
         refs = report.get("references", [])
 
-        for key in section_order:
-            sec = sections.get(key)
-            if not sec:
-                continue
-            section_html = render_html({
-                "sections": {key: sec},
-                "references": refs,
-                "report_caveats": [],
-            })
-            push_event(session_id, "section", {
-                "key": key,
-                "title": sec.get("title", key),
-                "html": section_html,
-            })
+        json_path = _save_report_to_disk(report, report.get("condition", condition))
 
-        _save_report_to_disk(report, report.get("condition", condition))
+        from app import save_report_html
+        save_report_html(report, json_path)
 
         update_report(session_id, report)
         logger.debug("update_report called for session %s — status now 'complete'", session_id)

@@ -119,11 +119,16 @@
 </head>
 <body>
   <header>
-    <h1>MedBrief — {{ report.condition }}</h1>
-    <div class="meta">
-      Generated {{ report.generated_at }} &nbsp;|&nbsp;
-      Sources: {{ report.data_sources_queried | join(', ') }} &nbsp;|&nbsp;
-      {{ report.references | length }} references
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div>
+        <h1>MedBrief — {{ report.condition }}</h1>
+        <div class="meta">
+          Generated {{ report.generated_at }} &nbsp;|&nbsp;
+          Sources: {{ report.data_sources_queried | join(', ') }} &nbsp;|&nbsp;
+          {{ report.references | length }} references
+        </div>
+      </div>
+      <a href="/" style="color:#a5b4fc; font-size:0.85rem; text-decoration:none; white-space:nowrap;">← Back to MedBrief</a>
     </div>
   </header>
 
@@ -145,7 +150,7 @@
         {% set sec = sections[key] %}
         <section id="{{ key }}" class="report-section">
           <h2>{{ sec.title }}</h2>
-          <p>{{ sec.content | safe }}</p>
+          <p>{{ sec.content | linkify | safe }}</p>
 
           {% if sec.approved_therapies %}
             <h3>Approved Therapies</h3>

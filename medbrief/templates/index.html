@@ -11,19 +11,52 @@
       background: #f5f7fa;
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+      padding: 48px 16px 80px;
     }
     .card {
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 24px rgba(0,0,0,.08);
-      padding: 48px 40px;
+      padding: 36px 40px 40px;
       max-width: 520px;
       width: 100%;
+      transition: max-width .25s ease;
     }
-    h1 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; }
-    .subtitle { color: #6b7280; font-size: 0.95rem; margin-bottom: 32px; }
+    .card.wide { max-width: 720px; }
+
+    /* ---- Header ---- */
+    .app-header { margin-bottom: 24px; }
+    h1 { font-size: 1.8rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+    .subtitle { color: #6b7280; font-size: 0.95rem; }
+
+    /* ---- Tabs ---- */
+    .tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid #e5e7eb;
+      margin-bottom: 28px;
+    }
+    .tab-btn {
+      padding: 9px 20px;
+      border: none;
+      background: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #6b7280;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      border-radius: 0;
+      width: auto;
+      margin-top: 0;
+      transition: color .15s, border-color .15s;
+    }
+    .tab-btn.active { color: #4f46e5; border-bottom-color: #4f46e5; }
+    .tab-btn:hover:not(.active) { color: #374151; }
+
+    /* ---- Generate panel ---- */
     label { display: block; font-weight: 600; font-size: 0.9rem; color: #374151; margin-bottom: 8px; }
     input[type="text"] {
       width: 100%;
@@ -35,7 +68,7 @@
       transition: border-color .2s;
     }
     input[type="text"]:focus { border-color: #4f46e5; }
-    button {
+    button.primary {
       margin-top: 16px;
       width: 100%;
       padding: 13px;
@@ -48,8 +81,8 @@
       cursor: pointer;
       transition: background .2s;
     }
-    button:hover { background: #4338ca; }
-    button:disabled { background: #9ca3af; cursor: not-allowed; }
+    button.primary:hover { background: #4338ca; }
+    button.primary:disabled { background: #9ca3af; cursor: not-allowed; }
     #status-box {
       margin-top: 24px;
       padding: 14px 16px;
@@ -68,9 +101,7 @@
       display: flex; align-items: center; gap: 10px;
       margin: 14px 0 4px; color: #9ca3af; font-size: 0.82rem;
     }
-    .or-divider::before, .or-divider::after {
-      content: ''; flex: 1; height: 1px; background: #e5e7eb;
-    }
+    .or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
     select {
       width: 100%;
       padding: 12px 16px;
@@ -88,80 +119,254 @@
       background-position: right 14px center;
     }
     select:focus { border-color: #4f46e5; }
+
+    /* ---- Reports panel ---- */
+    .reports-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .reports-count { font-size: 0.82rem; color: #6b7280; }
+    .refresh-btn {
+      background: none;
+      border: 1.5px solid #d1d5db;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      width: auto;
+      margin-top: 0;
+      transition: border-color .15s;
+    }
+    .refresh-btn:hover { border-color: #4f46e5; color: #4f46e5; }
+
+    .report-card {
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: border-color .15s, box-shadow .15s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .report-card:hover {
+      border-color: #4f46e5;
+      box-shadow: 0 2px 12px rgba(79,70,229,.1);
+    }
+    .rc-condition {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 5px;
+    }
+    .rc-meta {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+    .rc-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .rc-sources { display: flex; gap: 6px; flex-wrap: wrap; }
+    .badge {
+      display: inline-block;
+      padding: 2px 9px;
+      background: #e0e7ff;
+      color: #3730a3;
+      border-radius: 10px;
+      font-size: 0.73rem;
+      font-weight: 600;
+    }
+    .rc-refs {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      white-space: nowrap;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #9ca3af;
+    }
+    .empty-state p { font-size: 0.95rem; margin-bottom: 6px; }
+    .empty-state small { font-size: 0.82rem; }
+    .loading-state { text-align: center; padding: 32px; color: #6b7280; font-size: 0.9rem; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>MedBrief</h1>
-    <p class="subtitle">Medical intelligence briefings — powered by live data and AI synthesis</p>
+  <div class="card" id="main-card">
+    <div class="app-header">
+      <h1>MedBrief</h1>
+      <p class="subtitle">Medical intelligence briefings — powered by live data and AI synthesis</p>
+    </div>
 
-    <form id="search-form">
-      <label for="condition">Medical condition</label>
-      <input type="text" id="condition" name="condition"
-             placeholder="e.g. Type 2 Diabetes, Multiple Sclerosis"
-             autocomplete="off" required>
+    <div class="tabs">
+      <button class="tab-btn active" id="tab-generate" onclick="switchTab('generate')">Generate</button>
+      <button class="tab-btn" id="tab-reports" onclick="switchTab('reports')">Reports</button>
+    </div>
 
-      <div class="or-divider">or choose from common conditions</div>
+    <!-- Generate panel -->
+    <div id="panel-generate">
+      <form id="search-form">
+        <label for="condition">Medical condition</label>
+        <input type="text" id="condition" name="condition"
+               placeholder="e.g. Type 2 Diabetes, Multiple Sclerosis"
+               autocomplete="off" required>
 
-      <select id="condition-select" aria-label="Select a common condition">
-        <option value="">-- select a condition --</option>
-        <optgroup label="Metabolic">
-          <option>Type 2 Diabetes</option>
-          <option>Type 1 Diabetes</option>
-          <option>Obesity</option>
-          <option>Non-Alcoholic Fatty Liver Disease</option>
-        </optgroup>
-        <optgroup label="Cardiovascular">
-          <option>Heart Failure</option>
-          <option>Atrial Fibrillation</option>
-          <option>Hypertension</option>
-          <option>Coronary Artery Disease</option>
-        </optgroup>
-        <optgroup label="Oncology">
-          <option>Non-Small Cell Lung Cancer</option>
-          <option>Breast Cancer</option>
-          <option>Colorectal Cancer</option>
-          <option>Glioblastoma</option>
-        </optgroup>
-        <optgroup label="Neurology">
-          <option>Multiple Sclerosis</option>
-          <option>Parkinson's Disease</option>
-          <option>Alzheimer's Disease</option>
-          <option>Amyotrophic Lateral Sclerosis</option>
-        </optgroup>
-        <optgroup label="Immunology / Rheumatology">
-          <option>Rheumatoid Arthritis</option>
-          <option>Systemic Lupus Erythematosus</option>
-          <option>Crohn's Disease</option>
-          <option>Ulcerative Colitis</option>
-        </optgroup>
-        <optgroup label="Respiratory">
-          <option>Asthma</option>
-          <option>COPD</option>
-          <option>Idiopathic Pulmonary Fibrosis</option>
-        </optgroup>
-        <optgroup label="Infectious Disease">
-          <option>HIV/AIDS</option>
-          <option>Tuberculosis</option>
-          <option>Hepatitis C</option>
-        </optgroup>
-        <optgroup label="Rare / Genetic">
-          <option>Cystic Fibrosis</option>
-          <option>Sickle Cell Disease</option>
-          <option>Duchenne Muscular Dystrophy</option>
-        </optgroup>
-      </select>
+        <div class="or-divider">or choose from common conditions</div>
 
-      <button type="submit" id="submit-btn">Generate Briefing</button>
-    </form>
+        <select id="condition-select" aria-label="Select a common condition">
+          <option value="">-- select a condition --</option>
+          <optgroup label="Metabolic">
+            <option>Type 2 Diabetes</option>
+            <option>Type 1 Diabetes</option>
+            <option>Obesity</option>
+            <option>Non-Alcoholic Fatty Liver Disease</option>
+          </optgroup>
+          <optgroup label="Cardiovascular">
+            <option>Heart Failure</option>
+            <option>Atrial Fibrillation</option>
+            <option>Hypertension</option>
+            <option>Coronary Artery Disease</option>
+          </optgroup>
+          <optgroup label="Oncology">
+            <option>Non-Small Cell Lung Cancer</option>
+            <option>Breast Cancer</option>
+            <option>Colorectal Cancer</option>
+            <option>Glioblastoma</option>
+          </optgroup>
+          <optgroup label="Neurology">
+            <option>Multiple Sclerosis</option>
+            <option>Parkinson's Disease</option>
+            <option>Alzheimer's Disease</option>
+            <option>Amyotrophic Lateral Sclerosis</option>
+          </optgroup>
+          <optgroup label="Immunology / Rheumatology">
+            <option>Rheumatoid Arthritis</option>
+            <option>Systemic Lupus Erythematosus</option>
+            <option>Crohn's Disease</option>
+            <option>Ulcerative Colitis</option>
+          </optgroup>
+          <optgroup label="Respiratory">
+            <option>Asthma</option>
+            <option>COPD</option>
+            <option>Idiopathic Pulmonary Fibrosis</option>
+          </optgroup>
+          <optgroup label="Infectious Disease">
+            <option>HIV/AIDS</option>
+            <option>Tuberculosis</option>
+            <option>Hepatitis C</option>
+          </optgroup>
+          <optgroup label="Rare / Genetic">
+            <option>Cystic Fibrosis</option>
+            <option>Sickle Cell Disease</option>
+            <option>Duchenne Muscular Dystrophy</option>
+          </optgroup>
+        </select>
 
-    <div id="status-box"></div>
-    <div id="progress"><div id="progress-bar"></div></div>
-    <div class="warning-msg" id="warning-msg"></div>
-    <div class="error-msg" id="error-msg"></div>
+        <button type="submit" class="primary" id="submit-btn">Generate Briefing</button>
+      </form>
+
+      <div id="status-box"></div>
+      <div id="progress"><div id="progress-bar"></div></div>
+      <div class="warning-msg" id="warning-msg"></div>
+      <div class="error-msg" id="error-msg"></div>
+    </div>
+
+    <!-- Reports panel -->
+    <div id="panel-reports" style="display:none">
+      <div class="reports-toolbar">
+        <span class="reports-count" id="reports-count"></span>
+        <button class="refresh-btn" onclick="loadReports()">Refresh</button>
+      </div>
+      <div id="reports-list">
+        <div class="loading-state">Loading reports...</div>
+      </div>
+    </div>
   </div>
 
   <script>
+    const card = document.getElementById('main-card');
+
+    // ---- Tab switching ----
+    function switchTab(tab) {
+      document.getElementById('tab-generate').classList.toggle('active', tab === 'generate');
+      document.getElementById('tab-reports').classList.toggle('active', tab === 'reports');
+      document.getElementById('panel-generate').style.display = tab === 'generate' ? '' : 'none';
+      document.getElementById('panel-reports').style.display = tab === 'reports' ? '' : 'none';
+      card.classList.toggle('wide', tab === 'reports');
+      if (tab === 'reports') loadReports();
+    }
+
+    // ---- Reports tab ----
+    function formatDate(iso) {
+      if (!iso) return '';
+      try {
+        return new Date(iso).toLocaleString('en-US', {
+          month: 'short', day: 'numeric', year: 'numeric',
+          hour: '2-digit', minute: '2-digit',
+        });
+      } catch (_) { return iso; }
+    }
+
+    function loadReports() {
+      const list = document.getElementById('reports-list');
+      list.innerHTML = '<div class="loading-state">Loading...</div>';
+      fetch('/api/reports')
+        .then(r => r.json())
+        .then(reports => {
+          const countEl = document.getElementById('reports-count');
+          countEl.textContent = reports.length
+            ? `${reports.length} report${reports.length === 1 ? '' : 's'}`
+            : '';
+
+          if (!reports.length) {
+            list.innerHTML = `
+              <div class="empty-state">
+                <p>No reports yet.</p>
+                <small>Generate a briefing from the Generate tab — it will appear here.</small>
+              </div>`;
+            return;
+          }
+
+          list.innerHTML = reports.map(r => {
+            const badges = (r.sources || []).map(s =>
+              `<span class="badge">${s}</span>`
+            ).join('');
+            const htmlHref = r.html_filename
+              ? `/reports-file/${encodeURIComponent(r.html_filename)}`
+              : `/saved-report/${encodeURIComponent(r.filename)}`;
+            return `
+              <a class="report-card" href="${htmlHref}">
+                <div class="rc-condition">${escHtml(r.condition)}</div>
+                <div class="rc-meta">${formatDate(r.generated_at)}</div>
+                <div class="rc-footer">
+                  <div class="rc-sources">${badges}</div>
+                  <span class="rc-refs">${r.references_count} references</span>
+                </div>
+              </a>`;
+          }).join('');
+        })
+        .catch(() => {
+          document.getElementById('reports-list').innerHTML =
+            '<div class="empty-state"><p>Failed to load reports.</p></div>';
+        });
+    }
+
+    function escHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // ---- Generate tab ----
     const form = document.getElementById('search-form');
     const btn = document.getElementById('submit-btn');
     const conditionSelect = document.getElementById('condition-select');
@@ -173,12 +378,12 @@
         conditionSelect.value = '';
       }
     });
+
     const statusBox = document.getElementById('status-box');
     const progressDiv = document.getElementById('progress');
     const progressBar = document.getElementById('progress-bar');
     const errorMsg = document.getElementById('error-msg');
     const warningMsg = document.getElementById('warning-msg');
-
     let progressPct = 0;
 
     form.addEventListener('submit', async (e) => {
@@ -211,33 +416,37 @@
         return;
       }
 
-      // Open SSE stream
-      const evtSource = new EventSource('/stream/' + sessionId);
+      // Polling is the guaranteed redirect mechanism — starts immediately.
+      // SSE is used only for live status text updates.
       let pollInterval = null;
+      let evtSource = null;
+      let redirecting = false;
 
       function redirectToReport() {
+        if (redirecting) return;
+        redirecting = true;
+        if (pollInterval) { clearInterval(pollInterval); pollInterval = null; }
+        if (evtSource) { evtSource.close(); evtSource = null; }
         progressBar.style.width = '100%';
         statusBox.textContent = 'Report ready — loading...';
         window.location.href = '/report/' + sessionId;
       }
 
-      function startPolling() {
-        if (pollInterval) return;
-        statusBox.textContent = 'Synthesizing report (this may take a minute)...';
-        pollInterval = setInterval(async () => {
-          try {
-            const r = await fetch('/status/' + sessionId);
-            const d = await r.json();
-            if (d.ready) {
-              clearInterval(pollInterval);
-              redirectToReport();
-            }
-          } catch (_) { /* network blip — keep polling */ }
-        }, 3000);
-      }
+      // Start polling every 3 s immediately — this is what triggers the redirect.
+      pollInterval = setInterval(async () => {
+        try {
+          const r = await fetch('/status/' + sessionId);
+          const d = await r.json();
+          if (d.ready) redirectToReport();
+        } catch (_) { /* network blip — keep polling */ }
+      }, 3000);
+
+      // SSE for live status text only (best-effort).
+      evtSource = new EventSource('/stream/' + sessionId);
 
       evtSource.onmessage = (e) => {
-        const event = JSON.parse(e.data);
+        let event;
+        try { event = JSON.parse(e.data); } catch (_) { return; }
 
         if (event.type === 'status') {
           statusBox.textContent = event.data;
@@ -248,22 +457,16 @@
           statusBox.textContent =
             `Iteration ${d.iteration}/3 — Trials: ${d.trials}, PubMed: ${d.pubmed}, FDA: ${d.fda}`;
         } else if (event.type === 'complete') {
-          if (pollInterval) clearInterval(pollInterval);
-          evtSource.close();
           redirectToReport();
         } else if (event.type === 'warning') {
-          // Non-fatal — show inline, keep pipeline running
           showWarning(event.data.message || event.data);
         } else if (event.type === 'error') {
-          // Per-source errors are non-fatal — log as warning and continue
           showWarning('Source unavailable (' + (event.data.source || 'unknown') + ') — continuing with available data.');
         }
       };
 
       evtSource.onerror = () => {
-        evtSource.close();
-        // SSE dropped (long synthesis gap) — fall back to polling
-        startPolling();
+        if (evtSource) { evtSource.close(); evtSource = null; }
       };
     });
 

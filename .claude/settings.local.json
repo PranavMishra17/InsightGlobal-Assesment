@@ -31,7 +31,10 @@
       "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f''hitCount={d[\"\"hitCount\"\"]}, first_title={d[\"\"resultList\"\"][\"\"result\"\"][0][\"\"title\"\"][:70]}''\\)\")",
       "Bash(curl -s -H \"User-Agent: MedBrief/1.0 contact@yourorg.com\" \"https://efts.sec.gov/LATEST/search-index?q=%22type+2+diabetes%22&forms=10-K&dateRange=custom&startdt=2024-01-01&enddt=2026-01-01\")",
       "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); hits=d[''hits''][''hits'']; print\\(f''total={d[\"\"hits\"\"][\"\"total\"\"][\"\"value\"\"]}, first_entity={hits[0][\"\"_source\"\"][\"\"entity_name\"\"]}''\\)\")",
-      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); hits=d[''hits''][''hits'']; src=hits[0][''_source'']; print\\(f''total={d[\"\"hits\"\"][\"\"total\"\"][\"\"value\"\"]}, keys={list\\(src.keys\\(\\)\\)}, first={src}''\\)\")"
+      "Bash(py -c \"import json,sys; d=json.load\\(sys.stdin\\); hits=d[''hits''][''hits'']; src=hits[0][''_source'']; print\\(f''total={d[\"\"hits\"\"][\"\"total\"\"][\"\"value\"\"]}, keys={list\\(src.keys\\(\\)\\)}, first={src}''\\)\")",
+      "Bash(python -c \"import app; print\\(''app OK''\\)\")",
+      "Bash(python -c \"import app; rules = [str\\(r\\) for r in app.app.url_map.iter_rules\\(\\)]; print\\(''\\\\n''.join\\(sorted\\(rules\\)\\)\\)\")",
+      "Bash(python -c \"import app; print\\(''imports OK''\\); print\\(''routes:'', [str\\(r\\) for r in sorted\\(str\\(r\\) for r in app.app.url_map.iter_rules\\(\\)\\)]\\)\")"
     ]
   }
 }

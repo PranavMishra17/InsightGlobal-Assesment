@@ -1,12 +1,15 @@
+import glob
 import json
 import logging
+import os
 import queue
+import re
 import threading
 import uuid
 from datetime import datetime, timezone
 
 from dotenv import load_dotenv
-from flask import Flask, Response, jsonify, render_template, request
+from flask import Flask, Response, jsonify, render_template, request, send_from_directory
 
 load_dotenv()
 
@@ -19,6 +22,35 @@ logging.getLogger("werkzeug").setLevel(logging.WARNING)  # suppress Flask reques
 
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
+
+REPORTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "reports")
+
+
+def _linkify_citations(text: str) -> str:
+    """Convert [SOURCE_N] markers to superscript anchor links."""
+    if not text:
+        return ""
+    return re.sub(
+        r'\[SOURCE_(\d+)\]',
+        lambda m: f'<sup><a href="#ref-{m.group(1)}">[{m.group(1)}]</a></sup>',
+        text,
+    )
+
+
+app.jinja_env.filters["linkify"] = _linkify_citations
+
+
+def save_report_html(report: dict, json_path: str) -> None:
+    """Render the report template to a standalone HTML file alongside its JSON."""
+    html_path = json_path.replace(".json", ".html")
+    try:
+        with app.app_context():
+            html = render_template("report.html", report=report)
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(html)
+        logger.info("Report HTML saved: %s", html_path)
+    except Exception as e:
+        logger.error("Failed to save report HTML for %s: %s", json_path, e)
 
 # --- In-memory session store ---
 _store: dict = {}
@@ -143,6 +175,67 @@ def report(session_id):
     if not session or not session.get("report"):
         return jsonify({"error": "report not ready"}), 404
     return render_template("report.html", report=session["report"])
+
+
+@app.route("/api/reports")
+def api_reports():
+    """List all saved report JSON files, newest first. Auto-generates missing HTML files."""
+    if not os.path.isdir(REPORTS_DIR):
+        return jsonify([])
+    files = sorted(
+        glob.glob(os.path.join(REPORTS_DIR, "*.json")),
+        key=lambda p: os.path.getmtime(p),
+        reverse=True,
+    )
+    reports = []
+    for path in files:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            html_path = path.replace(".json", ".html")
+            if not os.path.isfile(html_path):
+                save_report_html(data, path)
+            filename = os.path.basename(path)
+            reports.append({
+                "filename": filename,
+                "html_filename": filename.replace(".json", ".html"),
+                "condition": data.get("condition", "Unknown"),
+                "generated_at": data.get("generated_at", ""),
+                "references_count": len(data.get("references", [])),
+                "sources": data.get("data_sources_queried", []),
+            })
+        except Exception as e:
+            logger.warning("Skipping unreadable report %s: %s", path, e)
+    return jsonify(reports)
+
+
+@app.route("/reports-file/<filename>")
+def reports_file(filename):
+    """Serve a pre-rendered HTML report file directly."""
+    if not re.match(r'^[a-z0-9_\-]+\.html$', filename):
+        return jsonify({"error": "invalid filename"}), 400
+    if not os.path.isfile(os.path.join(REPORTS_DIR, filename)):
+        return jsonify({"error": "report not found"}), 404
+    return send_from_directory(REPORTS_DIR, filename)
+
+
+@app.route("/saved-report/<filename>")
+def saved_report(filename):
+    """Load and render a report from disk by filename."""
+    # Prevent path traversal — only allow bare filenames ending in .json
+    safe = re.sub(r"[^a-z0-9_\-]", "", filename.lower().removesuffix(".json"))
+    if not safe or filename != safe + ".json":
+        return jsonify({"error": "invalid filename"}), 400
+    path = os.path.join(REPORTS_DIR, filename)
+    if not os.path.isfile(path):
+        return jsonify({"error": "report not found"}), 404
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            report_data = json.load(f)
+    except Exception as e:
+        logger.error("Failed to load saved report %s: %s", filename, e)
+        return jsonify({"error": "failed to load report"}), 500
+    return render_template("report.html", report=report_data)
 
 
 if __name__ == "__main__":
